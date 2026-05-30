@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOME -->
   <url>
     <loc>https://www.antonioilacqua.it/</loc>
     <lastmod>2026-05-30</lastmod>
@@ -9,7 +8,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- SERVIZI -->
   <url>
     <loc>https://www.antonioilacqua.it/servizi.html</loc>
     <lastmod>2026-04-10</lastmod>
@@ -45,7 +43,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- PRENOTA CALL -->
   <url>
     <loc>https://www.antonioilacqua.it/prenota-call.html</loc>
     <lastmod>2026-04-10</lastmod>
@@ -53,7 +50,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- BLOG -->
   <url>
     <loc>https://www.antonioilacqua.it/blog/</loc>
     <lastmod>2026-04-21</lastmod>
@@ -82,7 +78,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- LEGAL -->
   <url>
     <loc>https://www.antonioilacqua.it/privacy-policy.html</loc>
     <lastmod>2026-04-10</lastmod>
