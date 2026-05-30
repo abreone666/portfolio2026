@@ -1,7 +1,6 @@
 {
   "rewrites": [
-    { "source": "/contact.php", "destination": "/api/contact" },
-    { "source": "/../contact.php", "destination": "/api/contact" }
+    { "source": "/contact.php", "destination": "/api/contact" }
   ],
   "headers": [
     {
