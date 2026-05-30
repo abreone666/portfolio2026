@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /prova2/
+Disallow: /promo/
+Disallow: /agenzia.html
+
+Sitemap: https://www.antonioilacqua.it/sitemap.xml

@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.npm
+
+# Build
+asset/css/tailwind-input.css
+tailwind.config.js
+
+# Dev/test folders
+prova2/
+claudio/
+update-00/
+agents/
+
+# Separate sub-project
+antonioilacqua-vendite/
+
+# Client side projects (not part of portfolio)
+am-global-service*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.claude/
+
+# Env
+.env
+.env.local
+.env*.local
+
+# Logs
+*.log

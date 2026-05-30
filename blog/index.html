@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZHP3MV6NG"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-2ZHP3MV6NG');
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Blog – Web Design & SEO per PMI siciliane | Antonio Ilacqua</title>
+    <meta name="description" content="Articoli pratici su web design, SEO locale e casi studio per PMI di Milazzo, Messina e Sicilia. Scritto da Antonio Ilacqua, web designer freelancer." />
+    <link rel="canonical" href="https://antonioilacqua.it/blog/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog – Web Design & SEO per PMI siciliane | Antonio Ilacqua" />
+    <meta property="og:description" content="Articoli pratici su web design, SEO locale e casi studio per PMI di Milazzo e Messina." />
+    <meta property="og:url" content="https://antonioilacqua.it/blog/" />
+    <meta name="robots" content="index, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+        .blog-card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; overflow:hidden; transition:box-shadow 0.25s, transform 0.25s; text-decoration:none; display:flex; flex-direction:column; }
+        .blog-card:hover { box-shadow:0 12px 40px rgba(0,150,64,0.14); transform:translateY(-4px); }
+        .blog-card__img { width:100%; aspect-ratio:16/9; object-fit:cover; background:#f3f4f6; display:flex; align-items:center; justify-content:center; }
+        .blog-card__img-placeholder { width:100%; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; }
+        .blog-card__body { padding:1.5rem; flex:1; display:flex; flex-direction:column; gap:0.75rem; }
+        .blog-card__tag { display:inline-block; background:rgba(0,150,64,0.1); color:#009640; padding:3px 12px; border-radius:99px; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; font-family:'Montserrat',sans-serif; width:fit-content; }
+        .blog-card__title { font-family:'Bebas Neue',sans-serif; font-size:1.55rem; color:#0c1d1b; letter-spacing:0.02em; line-height:1.15; margin:0; }
+        .blog-card__excerpt { font-family:'Montserrat',sans-serif; font-size:0.875rem; color:#6b7280; line-height:1.7; margin:0; flex:1; }
+        .blog-card__meta { display:flex; align-items:center; gap:1rem; font-family:'Montserrat',sans-serif; font-size:0.78rem; color:#9ca3af; margin-top:auto; padding-top:0.75rem; border-top:1px solid #f3f4f6; }
+        .blog-card__read-more { color:#009640; font-weight:700; font-size:0.82rem; display:flex; align-items:center; gap:4px; margin-left:auto; }
+    </style>
+</head>
+
+<body class="bg-[#020305] font-sans antialiased">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass-header border-b border-primary/10 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <a href="/index.html" class="flex items-center gap-3 group">
+                <div class="h-10 transition-transform group-hover:scale-105">
+                    <img src="/asset/img/antonioilacqua-design-logo.png" alt="Antonio Ilacqua" class="h-full w-auto">
+                </div>
+            </a>
+            <div class="relative">
+                <button id="nav-menu-button" aria-expanded="false" aria-label="Apri menu"
+                    class="flex items-center gap-2 text-sm font-bold border border-primary/20 px-4 py-2.5 rounded-xl hover:bg-primary/5 transition-colors">
+                    Menu
+                    <span id="nav-menu-icon" class="material-symbols-outlined text-[20px] transition-transform duration-200">menu</span>
+                </button>
+                <div id="nav-dropdown"
+                    class="absolute top-full right-0 w-72 bg-white dark:bg-dark-800 border border-primary/10 rounded-2xl shadow-2xl opacity-0 invisible transition-all duration-200 p-3 z-50 mt-2">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-3 pb-1">Servizi</p>
+                    <a href="/servizi/siti-vetrina.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">desktop_windows</span>
+                        <div><p class="text-sm font-bold">Siti Vetrina</p><p class="text-[10px] text-gray-500">Presenza professionale</p></div>
+                    </a>
+                    <a href="/servizi/e-commerce.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        <div><p class="text-sm font-bold">E-Commerce</p><p class="text-[10px] text-gray-500">Vendi online</p></div>
+                    </a>
+                    <a href="/servizi/local-seo.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <div><p class="text-sm font-bold">Local SEO</p><p class="text-[10px] text-gray-500">Visibilità locale</p></div>
+                    </a>
+                    <a href="/servizi/rebranding.html" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">brush</span>
+                        <div><p class="text-sm font-bold">Rebranding</p><p class="text-[10px] text-gray-500">Evoluzione brand</p></div>
+                    </a>
+                    <a href="/servizi.html" class="flex items-center justify-center gap-2 p-2 text-xs font-bold text-primary hover:bg-primary/5 rounded-xl transition-colors">
+                        Tutti i Servizi <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                    </a>
+                    <div class="border-t border-primary/10 my-2"></div>
+                    <a href="/blog/" class="flex items-center gap-3 p-3 rounded-xl bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">article</span>
+                        <span class="text-sm font-bold text-primary">Blog</span>
+                    </a>
+                    <a href="/#faq" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">help</span>
+                        <span class="text-sm font-bold">FAQ</span>
+                    </a>
+                    <div class="mt-2 pt-2 border-t border-primary/10">
+                        <a href="/#contatti" class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all nav-menu-link">
+                            Contattami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BLOG (dark) -->
+    <section style="background: radial-gradient(circle at 60% 50%, #0a1a0f 0%, #020305 70%);" class="pt-20 pb-16 px-6 border-b border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-6">Risorse Gratuite</span>
+            <h1 class="text-5xl lg:text-7xl text-white mb-6" style="font-family:'Bebas Neue',sans-serif; letter-spacing:0.02em;">
+                Blog
+            </h1>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                Guide pratiche su web design, SEO locale e casi studio reali. Scritto per PMI di Milazzo, Messina e Sicilia che vogliono crescere online senza buttare soldi.
+            </p>
+        </div>
+    </section>
+
+    <!-- GRIGLIA ARTICOLI (sfondo bianco) -->
+    <main style="background-color: #ffffff; min-height: 60vh;">
+        <div class="max-w-5xl mx-auto px-6 py-16">
+
+            <!-- Tutti gli articoli -->
+            <h2 style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; color:#0c1d1b; letter-spacing:0.03em; margin-bottom:2rem;">Tutti gli articoli</h2>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:2rem;">
+
+                <!-- Card 1 -->
+                <a href="/blog/quanto-costa-sito-web-milazzo.html" class="blog-card">
+                    <div class="blog-card__img-placeholder" style="background:linear-gradient(135deg,#0a2010 0%,#0f3020 100%);">
+                        <span class="material-symbols-outlined" style="font-size:3.5rem; color:rgba(0,150,64,0.6);">payments</span>
+                    </div>
+                    <div class="blog-card__body">
+                        <span class="blog-card__tag">Guida Pratica</span>
+                        <h3 class="blog-card__title">Quanto costa un sito web professionale a Milazzo</h3>
+                        <p class="blog-card__excerpt">Prezzi reali per ogni fascia di budget: dalla vetrina base al negozio online. Senza giri di parole, con tabelle comparative e cosa evitare.</p>
+                        <div class="blog-card__meta">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 5 min</span>
+                            <span>Apr 2026</span>
+                            <span class="blog-card__read-more">Leggi <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="/blog/seo-locale-pmi-messinese.html" class="blog-card">
+                    <div class="blog-card__img-placeholder" style="background:linear-gradient(135deg,#0a1020 0%,#0d1a35 100%);">
+                        <span class="material-symbols-outlined" style="font-size:3.5rem; color:rgba(0,150,64,0.6);">location_on</span>
+                    </div>
+                    <div class="blog-card__body">
+                        <span class="blog-card__tag" style="background:rgba(0,120,200,0.1); color:#0078c8;">Guida Evergreen</span>
+                        <h3 class="blog-card__title">SEO locale per PMI del messinese</h3>
+                        <p class="blog-card__excerpt">Guida completa per comparire su Google Maps: Google Business Profile, keyword locali, recensioni e citazioni. Tutto quello che serve, senza tecnicismi.</p>
+                        <div class="blog-card__meta">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 7 min</span>
+                            <span>Apr 2026</span>
+                            <span class="blog-card__read-more">Leggi <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="/blog/caso-studio-seidita-2-settimane.html" class="blog-card">
+                    <div class="blog-card__img-placeholder" style="background:linear-gradient(135deg,#1a0a05 0%,#2a1008 100%);">
+                        <span class="material-symbols-outlined" style="font-size:3.5rem; color:rgba(0,150,64,0.6);">restaurant</span>
+                    </div>
+                    <div class="blog-card__body">
+                        <span class="blog-card__tag" style="background:rgba(245,130,32,0.1); color:#c97000;">Caso Studio</span>
+                        <h3 class="blog-card__title">Seidita Steakhouse online in 2 settimane</h3>
+                        <p class="blog-card__excerpt">Dal briefing al lancio in 14 giorni: strategia, design, SEO e risultati reali. Come un ristorante di Milazzo è arrivato al #3 su Google Maps in un mese.</p>
+                        <div class="blog-card__meta">
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> 5 min</span>
+                            <span>Apr 2026</span>
+                            <span class="blog-card__read-more">Leggi <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span></span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- CTA newsletter / contatto -->
+        <div style="background:#f0faf4; border-top:1px solid #c6e8d5; padding:4rem 1.5rem; text-align:center;">
+            <div style="max-width:560px; margin:0 auto;">
+                <span class="material-symbols-outlined" style="font-size:2.5rem; color:#009640; display:block; margin-bottom:1rem;">tips_and_updates</span>
+                <h2 style="font-family:'Bebas Neue',sans-serif; font-size:2rem; color:#0c1d1b; letter-spacing:0.03em; margin-bottom:0.75rem;">Vuoi una consulenza gratuita?</h2>
+                <p style="font-family:'Montserrat',sans-serif; color:#374151; margin-bottom:1.75rem; font-size:0.95rem; line-height:1.7;">Applica queste strategie alla tua attività con il supporto di un professionista locale. Prenota una call gratuita di 15 minuti.</p>
+                <a href="/#contatti" style="display:inline-flex; align-items:center; gap:8px; background:#009640; color:#fff; padding:0.85rem 2rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-weight:700; text-decoration:none; font-size:0.9rem;">
+                    <span class="material-symbols-outlined" style="font-size:18px;">calendar_today</span>
+                    Prenota la Call Gratuita
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0c1d1b] text-white pt-12 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="size-8 bg-primary flex items-center justify-center rounded text-white">
+                        <span class="material-symbols-outlined text-sm">design_services</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight">Antonio Ilacqua</h2>
+                </div>
+                <p class="text-gray-400 max-w-sm mb-6">Freelancer – Web Designer & SEO Specialist. Trasformo visioni in esperienze digitali di alto livello.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Navigazione</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a class="hover:text-primary transition-colors" href="/servizi.html">Servizi</a></li>
+                    <li><a class="hover:text-primary transition-colors text-primary font-bold" href="/blog/">Blog</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#faq">FAQ</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#contatti">Contatti</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Contatti</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                        <span>Via Francesco Crispi 81, 98057 Milazzo (ME)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        <a href="mailto:info@antonioilacqua.it" class="hover:text-primary transition-colors">info@antonioilacqua.it</a>
+                    </li>
+                    <li class="text-xs mt-2 text-gray-500">P.IVA 03740380831</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+            <p>© 2026 Antonio Franco Ilacqua. Tutti i diritti riservati.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="/privacy-policy.html">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navMenuButton = document.getElementById('nav-menu-button');
+        const navDropdown = document.getElementById('nav-dropdown');
+        const navMenuIcon = document.getElementById('nav-menu-icon');
+        if (navMenuButton) {
+            const closeNavMenu = () => {
+                navDropdown.classList.add('opacity-0', 'invisible');
+                navMenuIcon.textContent = 'menu';
+                navMenuButton.setAttribute('aria-expanded', 'false');
+            };
+            navMenuButton.addEventListener('click', () => {
+                const isOpen = !navDropdown.classList.contains('invisible');
+                if (isOpen) { closeNavMenu(); }
+                else {
+                    navDropdown.classList.remove('opacity-0', 'invisible');
+                    navMenuIcon.textContent = 'close';
+                    navMenuButton.setAttribute('aria-expanded', 'true');
+                }
+            });
+            document.addEventListener('click', (e) => {
+                if (!navDropdown.classList.contains('invisible') && !navMenuButton.contains(e.target) && !navDropdown.contains(e.target)) {
+                    closeNavMenu();
+                }
+            });
+        }
+    </script>
+    <script src="/asset/js/cookie-consent.js"></script>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="it" class="dark scroll-smooth">
+
+<head>
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K5WNP2PV');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google tag (gtag.js) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/asset/img/antonioilacqua-design-logo.png" />
+    <!-- reCAPTCHA v3: caricato dinamicamente da cookie-consent.js dopo consenso -->
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-sans text-[#0c1d1b] dark:text-white antialiased transition-colors duration-300">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5WNP2PV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+
+        <header class="sticky top-0 z-50 glass-header border-b border-primary/10 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <a href="/index.html" class="flex items-center gap-3 group">
+                <div class="h-10 transition-transform group-hover:scale-105">
+                    <img src="/asset/img/antonioilacqua-design-logo.png" alt="Antonio Ilacqua" class="h-full w-auto">
+                </div>
+            </a>
+
+            <div class="relative">
+                <button id="nav-menu-button" aria-expanded="false" aria-label="Apri menu"
+                    class="flex items-center gap-2 text-sm font-bold border border-primary/20 px-4 py-2.5 rounded-xl hover:bg-primary/5 transition-colors">
+                    Menu
+                    <span id="nav-menu-icon" class="material-symbols-outlined text-[20px] transition-transform duration-200">menu</span>
+                </button>
+
+                <div id="nav-dropdown"
+                    class="absolute top-full right-0 w-72 bg-white dark:bg-dark-800 border border-primary/10 rounded-2xl shadow-2xl opacity-0 invisible transition-all duration-200 p-3 z-50 mt-2">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-3 pb-1">Servizi</p>
+                    <a href="/servizi/siti-vetrina.html"
+                        class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">desktop_windows</span>
+                        <div>
+                            <p class="text-sm font-bold">Siti Vetrina</p>
+                            <p class="text-[10px] text-gray-500">Presenza professionale</p>
+                        </div>
+                    </a>
+                    <a href="/servizi/e-commerce.html"
+                        class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        <div>
+                            <p class="text-sm font-bold">E-Commerce</p>
+                            <p class="text-[10px] text-gray-500">Vendi online</p>
+                        </div>
+                    </a>
+                    <a href="/servizi/local-seo.html"
+                        class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <div>
+                            <p class="text-sm font-bold">Local SEO</p>
+                            <p class="text-[10px] text-gray-500">Visibilità locale</p>
+                        </div>
+                    </a>
+                    <a href="/servizi/rebranding.html"
+                        class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">brush</span>
+                        <div>
+                            <p class="text-sm font-bold">Rebranding</p>
+                            <p class="text-[10px] text-gray-500">Evoluzione brand</p>
+                        </div>
+                    </a>
+                    <a href="/servizi.html"
+                        class="flex items-center justify-center gap-2 p-2 text-xs font-bold text-primary hover:bg-primary/5 rounded-xl transition-colors">
+                        Tutti i Servizi <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                    </a>
+
+                    <div class="border-t border-primary/10 my-2"></div>
+
+                    <a href="/index.html#about"
+                        class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">person</span>
+                        <span class="text-sm font-bold">Chi Sono</span>
+                    </a>
+                    <a href="/index.html#faq"
+                        class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">help</span>
+                        <span class="text-sm font-bold">FAQ</span>
+                    </a>
+
+                    <div class="mt-2 pt-2 border-t border-primary/10">
+                        <a href="/index.html#contatti"
+                            class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all nav-menu-link">
+                            Contattami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="relative min-h-[85vh] flex items-center bg-[#020305] overflow-hidden py-24 md:py-32">
+        <div class="absolute inset-0 bg-grid opacity-10 -z-10 animate-fade-in"></div>
+        <div
+            class="absolute top-1/4 -left-20 w-96 h-96 bg-neon-glow/20 blur-[120px] rounded-full pointer-events-none animate-blob">
+        </div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full pointer-events-none animate-blob"
+            style="animation-delay: 2s"></div>
+
+        <div class="max-w-12xl mx-auto px-6 sm:px-12 md:px-24 w-full relative z-10">
+            <div class="max-w-7xl text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold text-neon-glow uppercase tracking-widest mb-8 opacity-0 animate-fade-in-up">
+                    <span class="w-2 h-2 rounded-full bg-neon-glow animate-pulse"></span>
+                    Evoluzione Strategica del Brand a Milazzo
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-6 opacity-0 animate-fade-in-up"
+                    style="animation-delay: 150ms;">
+                    Rebranding e Identità Visiva: <br /> fai evolvere il tuo business.
+                </h1>
+
+                <p class="text-lg text-gray-400 mb-10 max-w-2xl leading-relaxed opacity-0 animate-fade-in-up"
+                    style="animation-delay: 300ms;">
+                    Riprogetto l'identità visiva della tua azienda per allinearla ai tuoi nuovi obiettivi, rendendola
+                    memorabile, competitiva e pronta a dominare il mercato.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 opacity-0 animate-fade-in-up" style="animation-delay: 450ms;">
+                    <a href="#contatti"
+                        class="px-8 py-4 bg-neon-glow text-black font-bold rounded shadow-neon hover:scale-105 transition-all">
+                        Inizia il rebranding
+                    </a>
+                    <a href="#metodo"
+                        class="text-white font-medium hover:text-neon-glow transition-colors flex items-center gap-2 group">
+                        Scopri il processo <span class="group-hover:translate-x-1 transition-transform">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-12 gap-4 md:h-[500px] lg:h-[580px]">
+                <div class="md:col-span-7 lg:col-span-8 opacity-0 animate-fade-in-up" style="animation-delay: 600ms;">
+                    <div class="h-72 sm:h-80 md:h-full rounded-2xl overflow-hidden bg-zinc-900 border border-white/5 group">
+                        <img src="https://images.unsplash.com/photo-1561070791-26c11d204a3d?q=80&w=2000&auto=format&fit=crop"
+                            alt="Brand Identity Design Showcase"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    </div>
+                </div>
+                <div class="md:col-span-5 lg:col-span-4 flex flex-col gap-4">
+                    <div class="h-48 sm:h-56 md:h-1/2 p-4 sm:p-6 md:p-10 rounded-2xl overflow-hidden bg-zinc-900 border border-white/5 opacity-0 animate-fade-in-up group"
+                        style="animation-delay: 750ms;">
+                        <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=2000&auto=format&fit=crop"
+                            alt="Color Palette and Brand Assets"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    </div>
+                    <div class="h-48 sm:h-56 md:h-1/2 p-4 sm:p-6 md:p-10 rounded-2xl overflow-hidden bg-zinc-900 border border-white/5 opacity-0 animate-fade-in-up group"
+                        style="animation-delay: 900ms;">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=2000&auto=format&fit=crop"
+                            alt="Modern Typography and Layout"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-900 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-neon-glow/5 blur-[100px] -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="reveal-on-scroll">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-glow/10 border border-neon-glow/20 text-[10px] font-bold text-neon-glow uppercase tracking-widest mb-6">
+                    La Filosofia
+                </div>
+                <h2 class="text-4xl md:text-5xl font-display font-black text-white mb-6 leading-tight">
+                    Il tuo brand è la <span class="text-neon-glow italic">“promessa”</span> che fai ai tuoi clienti
+                </h2>
+                <h3 class="text-xl font-bold text-gray-300 mb-8 border-l-2 border-neon-glow pl-4">
+                    Non è solo un logo, è percezione di valore.
+                </h3>
+                <div class="space-y-6 text-gray-400 leading-relaxed text-lg">
+                    <p>
+                        I clienti non percepiscono la qualità dei tuoi servizi perché la tua immagine aziendale è
+                        obsoleta? Un rebranding non è solo un "nuovo logo", ma una strategia visiva per riposizionare la
+                        tua azienda e giustificare il tuo reale valore sul mercato.
+                    </p>
+                    <p>
+                        Riprogettiamo ogni punto di contatto tra te e il tuo pubblico per garantire coerenza, modernità
+                        e un impatto emotivo che spinga all'azione.
+                    </p>
+                    <p class="text-white font-medium">
+                        Diamo voce alla tua reale essenza aziendale, trasformandola in un vantaggio competitivo a
+                        Milazzo e oltre.
+                    </p>
+                </div>
+            </div>
+            <div class="relative reveal-on-scroll delay-200">
+                <div
+                    class="aspect-square bg-dark-800 rounded-3xl border border-white/10 p-2 relative group overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-neon-glow/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="h-full w-full rounded-2xl border border-white/5 flex flex-col items-center justify-center p-12 text-center relative z-10">
+                        <div class="size-20 bg-neon-glow/10 rounded-2xl flex items-center justify-center mb-8">
+                            <span class="material-symbols-outlined text-neon-glow text-4xl">brush</span>
+                        </div>
+                        <p class="text-2xl font-display font-bold text-white mb-4">Essenza Creativa</p>
+                        <p class="text-gray-400">Traduciamo i tuoi valori in un linguaggio visivo moderno e d'impatto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal-on-scroll">
+                <h2 class="text-4xl md:text-5xl font-display font-black text-white mb-6">Pilastri del <span
+                        class="text-neon-glow">Rebranding Strategico</span></h2>
+                <h3 class="text-xl text-gray-400 font-medium">Dall'analisi alla creazione definitiva</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="p-10 rounded-3xl bg-dark-900 border border-white/5 hover:border-neon-glow/30 transition-all group reveal-on-scroll">
+                    <div
+                        class="size-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-neon-glow/10 transition-colors">
+                        <span class="material-symbols-outlined text-neon-glow">strategy</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Analisi e Strategia</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Definiamo il nuovo posizionamento sul mercato studiando competitor e target di riferimento.
+                    </p>
+                </div>
+
+                <div
+                    class="p-10 rounded-3xl bg-dark-900 border border-white/5 hover:border-neon-glow/30 transition-all group reveal-on-scroll delay-100">
+                    <div
+                        class="size-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-neon-glow/10 transition-colors">
+                        <span class="material-symbols-outlined text-neon-glow">ink_pen</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Design Identità</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Creazione del nuovo logo e degli elementi grafici che compongono l'anima visiva dell'azienda.
+                    </p>
+                </div>
+
+                <div
+                    class="p-10 rounded-3xl bg-dark-900 border border-white/5 hover:border-neon-glow/30 transition-all group reveal-on-scroll delay-200">
+                    <div
+                        class="size-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-neon-glow/10 transition-colors">
+                        <span class="material-symbols-outlined text-neon-glow">auto_awesome</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-4">Immagine Coerente</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Sviluppo di materiali coordinati: social, sito web e stampati per una comunicazione a 360°.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-neon-glow relative overflow-hidden">
+        <!-- Abstract background pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" stroke-width="1" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal-on-scroll">
+            <h2
+                class="text-5xl md:text-7xl font-display font-black text-black mb-8 leading-none uppercase tracking-tighter">
+                Evolvi o <br /><span class="italic underline decoration-4 underline-offset-8">resta invisibile</span>
+            </h2>
+            <h3 class="text-2xl font-bold text-black/80 mb-10">Dona nuova vita al tuo business</h3>
+            <div class="space-y-6 text-black/90 text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+                <p>Una vecchia immagine trasmette un'idea di trascuratezza.</p>
+                <p>Un rebranding strategico è l'investimento più potente per aumentare il valore percepito dei tuoi
+                    servizi e fidelizzare il tuo pubblico.</p>
+                <p class="pt-6">È il momento di raccontare al mondo chi sei diventato veramente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-950">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal-on-scroll">
+                <h2 class="text-4xl font-display font-black text-white mb-10">Iniziamo il tuo <br /><span
+                        class="text-neon-glow">viaggio evolutivo</span></h2>
+                <h3 class="text-xl text-gray-300 font-bold mb-8">Il servizio ideale se:</h3>
+
+                <ul class="space-y-6">
+                    <li class="flex gap-4 items-start">
+                        <div class="size-6 rounded-full bg-neon-glow/20 flex items-center justify-center shrink-0 mt-1">
+                            <span class="material-symbols-outlined text-neon-glow text-sm">check</span>
+                        </div>
+                        <p class="text-gray-300">La tua identità visiva attuale non riflette più la qualità di quello
+                            che fai.</p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="size-6 rounded-full bg-neon-glow/20 flex items-center justify-center shrink-0 mt-1">
+                            <span class="material-symbols-outlined text-neon-glow text-sm">check</span>
+                        </div>
+                        <p class="text-gray-300">Vuoi aumentare i prezzi e hai bisogno di un'immagine più "premium".</p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="size-6 rounded-full bg-neon-glow/20 flex items-center justify-center shrink-0 mt-1">
+                            <span class="material-symbols-outlined text-neon-glow text-sm">check</span>
+                        </div>
+                        <p class="text-gray-300">Stai lanciando un nuovo ramo d'azienda o un nuovo prodotto di punta.
+                        </p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <div class="size-6 rounded-full bg-neon-glow/20 flex items-center justify-center shrink-0 mt-1">
+                            <span class="material-symbols-outlined text-neon-glow text-sm">check</span>
+                        </div>
+                        <p class="text-gray-300">Ti senti "uno dei tanti" e vuoi differenziarti nettamente dai
+                            competitor locali.</p>
+                    </li>
+                </ul>
+
+                <div class="mt-12 p-6 bg-dark-900 rounded-2xl border border-white/5">
+                    <p class="text-sm text-gray-500 leading-relaxed italic">
+                        Un brand non è quello che diciamo noi, ma quello che dicono i clienti quando non siamo nella
+                        stanza.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-dark-900 p-8 md:p-12 rounded-[2rem] border border-white/10 reveal-on-scroll delay-200"
+                id="contatti">
+                <h2 class="text-2xl font-bold text-white mb-8">Pianifichiamo l'evoluzione</h2>
+                <form class="space-y-6" id="contact-form" novalidate>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Nome e Cognome</label>
+                        <input type="text" name="nome" required
+                            class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-neon-glow outline-none transition-colors"
+                            placeholder="Il tuo nome">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                        <input type="email" name="email" required
+                            class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-neon-glow outline-none transition-colors"
+                            placeholder="nome@azienda.it">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Nome Azienda</label>
+                        <input type="text" name="nome_azienda"
+                            class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-neon-glow outline-none transition-colors"
+                            placeholder="La tua attività">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Cosa vuoi cambiare?</label>
+                        <textarea name="messaggio" required
+                            class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-neon-glow outline-none transition-colors h-32"
+                            placeholder="Descrivici brevemente la tua situazione attuale"></textarea>
+                    </div>
+                    <input type="hidden" name="recaptcha_token" id="recaptcha-token">
+                    <div id="form-response" class="hidden rounded-lg px-4 py-3 text-sm font-medium"></div>
+                    <button type="submit" id="submit-btn"
+                        class="w-full py-4 bg-neon-glow text-black font-black uppercase tracking-wider rounded-xl hover:scale-[1.02] transition-transform shadow-neon">
+                        Prenota Sessione Strategica
+                    </button>
+                    <p class="text-center text-xs text-gray-500">Ti ricontatterò entro 24 ore.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-dark-900 border-t border-white/5" id="faq">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl font-display font-bold mb-12 text-center">FAQ <span
+                    class="text-neon-glow italic">Rebranding Milazzo</span></h2>
+
+            <div class="space-y-4">
+                <details class="group bg-dark-800 rounded-2xl border border-white/5 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold pr-4">Quando è il momento giusto per fare un rebranding a Milazzo?</span>
+                        <span class="text-neon-glow group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-400 border-t border-white/5">
+                        Il momento giusto è quando l'identità visiva non rispecchia più i valori aziendali o quando vuoi
+                        attrarre un nuovo target più alto-spendente a Messina e provincia.
+                    </div>
+                </details>
+
+                <details class="group bg-dark-800 rounded-2xl border border-white/5 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold pr-4">Quanto costa un progetto di rebranding completo?</span>
+                        <span class="text-neon-glow group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-400 border-t border-white/5">
+                        Dipende dalla profondità dell'intervento. Si può partire dal solo restyling del logo fino alla
+                        creazione di un ecosistema visivo omnicanale.
+                    </div>
+                </details>
+
+                <details class="group bg-dark-800 rounded-2xl border border-white/5 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold pr-4">Il rebranding comporta la perdita della vecchia clientela?</span>
+                        <span class="text-neon-glow group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-400 border-t border-white/5">
+                        No, se fatto con strategia rafforza il legame con i clienti attuali e ne attira di nuovi che
+                        prima non consideravano il tuo brand.
+                    </div>
+                </details>
+
+                <details class="group bg-dark-800 rounded-2xl border border-white/5 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold pr-4">Quali asset vengono consegnati a fine progetto?</span>
+                        <span class="text-neon-glow group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-400 border-t border-white/5">
+                        Logo definitivo, tipografia, palette colori, manuale d'uso del brand e template per i social
+                        media.
+                    </div>
+                </details>
+
+                <details class="group bg-dark-800 rounded-2xl border border-white/5 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+                        <span class="font-bold pr-4">Quanto tempo occorre per rinnovare l'identità dell'attività?</span>
+                        <span class="text-neon-glow group-open:rotate-45 transition-transform">+</span>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-400 border-t border-white/5">
+                        Solitamente tra le 4 e le 10 settimane, includendo le fasi di analisi, creatività e affinamento.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+        <footer class="bg-[#0c1d1b] text-white pt-12 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
+            <!-- Brand + social -->
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="size-8 bg-primary flex items-center justify-center rounded text-white">
+                        <span class="material-symbols-outlined text-sm">design_services</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight">Antonio Ilacqua</h2>
+                </div>
+                <p class="text-gray-400 max-w-sm mb-6">
+                    Freelancer – Web Designer & SEO Specialist. Trasformo visioni in esperienze digitali di alto livello. Specializzato
+                    in performance, UX e conversioni. Punto di riferimento digitale per PMI tra Milazzo, Messina e
+                    Catania.
+                </p>
+                <div class="flex gap-4">
+                    <!-- LinkedIn -->
+                    <a class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                        href="https://www.linkedin.com/in/antonio-franco-ilacqua-a55117207" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn di Antonio Ilacqua">
+                        <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765C14.396 7.179 20 6.988 20 13.247V19z"/>
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a class="size-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                        href="https://www.instagram.com/antonioilacquadesigner/" target="_blank" rel="noopener noreferrer" aria-label="Instagram di Antonio Ilacqua">
+                        <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigazione -->
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Navigazione</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a class="hover:text-primary transition-colors" href="/servizi.html">Servizi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/index.html#about">Chi Sono</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/index.html#faq">FAQ</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/index.html#contatti">Contatti</a></li>
+                </ul>
+            </div>
+
+            <!-- NAP -->
+            <div itemscope itemtype="https://schema.org/LocalBusiness">
+                <meta itemprop="name" content="Antonio Ilacqua – Web Designer" />
+                <meta itemprop="url" content="https://www.antonioilacqua.it/" />
+                <meta itemprop="email" content="info@antonioilacqua.it" />
+                <h4 class="font-bold mb-6 text-lg">Contatti</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-start gap-2" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                        <span>
+                            <span itemprop="streetAddress">Milazzo</span>,
+                            <span itemprop="postalCode">98057</span>
+                            <span itemprop="addressLocality"> Milazzo</span>
+                            (<span itemprop="addressRegion">ME</span>),
+                            <span itemprop="addressCountry">Italia</span>
+                        </span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        <a href="mailto:info@antonioilacqua.it" itemprop="email"
+                           class="hover:text-primary transition-colors">info@antonioilacqua.it</a>
+                    </li>
+                    <li class="text-xs mt-2 text-gray-500">P.IVA 03740380831</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+            <p>© 2026 Antonio Franco Ilacqua. Tutti i diritti riservati.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="/privacy-policy.html">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/cookie-policy.html">Cookie Policy</a>
+                <button id="open-cookie-settings" onclick="window.cookieConsent && window.cookieConsent.show()" class="hover:text-white transition-colors text-sm bg-transparent border-none cursor-pointer p-0">Gestisci cookie</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer per animazioni
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        });
+
+    </script>
+
+    <script>
+        // Nav menu
+        (function () {
+            const btn = document.getElementById('nav-menu-button');
+            const icon = document.getElementById('nav-menu-icon');
+            const dropdown = document.getElementById('nav-dropdown');
+            function closeMenu() {
+                dropdown.classList.add('opacity-0', 'invisible');
+                icon.textContent = 'menu';
+                btn.setAttribute('aria-expanded', 'false');
+            }
+            if (btn && dropdown) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = !dropdown.classList.contains('invisible');
+                    if (isOpen) { closeMenu(); }
+                    else {
+                        dropdown.classList.remove('opacity-0', 'invisible');
+                        icon.textContent = 'close';
+                        btn.setAttribute('aria-expanded', 'true');
+                    }
+                });
+                document.querySelectorAll('.nav-menu-link').forEach(l => l.addEventListener('click', closeMenu));
+                document.addEventListener('click', (e) => {
+                    if (!dropdown.classList.contains('invisible') && !btn.contains(e.target) && !dropdown.contains(e.target)) closeMenu();
+                });
+            }
+        })();
+    </script>
+    <script>
+    (function () {
+        const form = document.getElementById('contact-form');
+        const btn = document.getElementById('submit-btn');
+        const resp = document.getElementById('form-response');
+        if (!form) return;
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const orig = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = 'Invio in corso…';
+            try {
+                const fd = new FormData(form);
+                // reCAPTCHA disponibile solo se l'utente ha accettato i relativi cookie
+                if (typeof grecaptcha !== 'undefined') {
+                    const recaptchaToken = await grecaptcha.execute('6Ldsv7EsAAAAAA2eYbQjONhT-0GXXa8jBL30gVVK', { action: 'contact' });
+                    fd.append('recaptcha_token', recaptchaToken);
+                }
+                const res = await fetch('../contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(fd)) });
+                const data = await res.json();
+                resp.className = res.ok
+                    ? 'rounded-lg px-4 py-3 text-sm font-medium bg-green-800 text-green-200'
+                    : 'rounded-lg px-4 py-3 text-sm font-medium bg-red-900 text-red-200';
+                resp.textContent = data.message;
+                if (res.ok) form.reset();
+            } catch (_) {
+                resp.className = 'rounded-lg px-4 py-3 text-sm font-medium bg-red-900 text-red-200';
+                resp.textContent = 'Errore di connessione. Riprova più tardi.';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = orig;
+                setTimeout(() => { resp.className = 'hidden'; }, 5000);
+            }
+        });
+    })();
+    </script>
+    <script src="/asset/js/cookie-consent.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/message/K25MOPDXM2IFJ1" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp" class="wa-float">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.428a.75.75 0 0 0 .916.916l5.604-1.47A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.66-.49-5.2-1.348l-.374-.214-3.875 1.016 1.021-3.763-.228-.386A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+    </a>
+</body>
+
+</html>

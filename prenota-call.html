@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prenota una call – Antonio Ilacqua</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://antonioilacqua.it/prenota-call.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap">
+  </noscript>
+
+  <link rel="stylesheet" href="/asset/css/main.css" />
+
+  <style>
+    :root {
+      --green: #009640;
+      --green-dim: #007a33;
+      --neon: #00ff66;
+      --bg: #020305;
+      --surface: #0b1015;
+      --surface-2: #141a21;
+      --border: #1f2937;
+      --text: #e5e7eb;
+      --text-muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      color: #fff;
+    }
+
+    /* ── Layout ── */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      width: 100%;
+      max-width: 680px;
+      padding: 2rem;
+    }
+
+    /* ── Badge utente ── */
+    .client-badge {
+      background: rgba(0, 150, 64, 0.08);
+      border: 1px solid rgba(0, 150, 64, 0.25);
+      border-radius: 0.75rem;
+      padding: 0.875rem 1.125rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .client-badge strong { color: #fff; font-weight: 600; }
+    .client-badge .budget-pill {
+      display: inline-block;
+      background: rgba(0, 255, 102, 0.1);
+      color: var(--neon);
+      border-radius: 999px;
+      padding: 0.125rem 0.625rem;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      margin-top: 0.25rem;
+    }
+
+    /* ── Steps ── */
+    .steps-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .steps-row .step {
+      flex: 1;
+      padding: 0.375rem 0;
+      text-align: center;
+      border-bottom: 2px solid var(--border);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .steps-row .step.active {
+      color: var(--green);
+      border-color: var(--green);
+    }
+    .steps-row .step.done {
+      color: var(--green);
+      border-color: var(--green);
+      opacity: 0.5;
+    }
+
+    /* ── Calendario ── */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 500px) {
+      .calendar-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .day-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 0.625rem 0.25rem;
+      cursor: pointer;
+      text-align: center;
+      transition: border-color 0.15s, background 0.15s, transform 0.1s;
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+    }
+    .day-btn:hover {
+      border-color: var(--green);
+      background: rgba(0, 150, 64, 0.07);
+    }
+    .day-btn.selected {
+      border-color: var(--green);
+      background: rgba(0, 150, 64, 0.14);
+    }
+    .day-btn .day-name {
+      display: block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.2rem;
+    }
+    .day-btn .day-num {
+      display: block;
+      font-size: 1.375rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .day-btn .day-month {
+      display: block;
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .day-btn.selected .day-name,
+    .day-btn.selected .day-month { color: #86efac; }
+    .day-btn.selected .day-num { color: #fff; }
+
+    /* ── Slot orari ── */
+    .slots-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--text-muted);
+      margin-bottom: 0.625rem;
+    }
+    .slots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 420px) {
+      .slots-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .slot-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 0.625rem;
+      padding: 0.5rem 0;
+      cursor: pointer;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .slot-btn:hover { border-color: var(--green); background: rgba(0, 150, 64, 0.07); }
+    .slot-btn.selected { border-color: var(--green); background: rgba(0, 150, 64, 0.18); color: #fff; }
+    .slot-btn:disabled { opacity: 0.3; cursor: default; }
+
+    /* ── Form campi ── */
+    .form-group { margin-bottom: 1rem; }
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 0.375rem;
+    }
+    .form-group input {
+      width: 100%;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 0.625rem;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .form-group input:focus { border-color: var(--green); }
+    .form-group input::placeholder { color: var(--text-muted); }
+
+    /* ── Durata ── */
+    .durata-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 0.75rem 0.5rem;
+      cursor: pointer;
+      text-align: center;
+      color: var(--text);
+      font-family: 'Montserrat', sans-serif;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .durata-btn:hover { border-color: var(--green); background: rgba(0,150,64,0.07); }
+    .durata-btn.selected { border-color: var(--green); background: rgba(0,150,64,0.14); }
+    .durata-btn.selected span:first-child { color: #fff; }
+    .durata-btn.selected span:last-child { color: #86efac !important; }
+
+    /* ── Riepilogo ── */
+    .riepilogo-box {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.125rem;
+      font-size: 0.875rem;
+      margin-bottom: 1.25rem;
+      display: none;
+    }
+    .riepilogo-box.visible { display: block; }
+    .riepilogo-box .riepilogo-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.375rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .riepilogo-box .riepilogo-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .riepilogo-box .riepilogo-row span:first-child { color: var(--text-muted); }
+    .riepilogo-box .riepilogo-row span:last-child { font-weight: 700; color: #fff; }
+
+    /* ── CTA ── */
+    .btn-primary {
+      display: block;
+      width: 100%;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      border-radius: 0.75rem;
+      padding: 0.9375rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1875rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      text-align: center;
+    }
+    .btn-primary:hover {
+      background: var(--green-dim);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(0, 150, 64, 0.25);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 0.75rem;
+      color: var(--text-muted);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 0.625rem;
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--green); color: #fff; }
+
+    /* ── Step panels ── */
+    .step-panel { display: none; }
+    .step-panel.active { display: block; }
+
+    /* ── Success ── */
+    .success-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(0, 150, 64, 0.12);
+      border: 2px solid var(--green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .success-icon svg { width: 36px; height: 36px; }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* ── Nota footer ── */
+    .footer-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1.5rem;
+    }
+    .footer-note a { color: var(--green); text-decoration: none; }
+
+    /* ── Animazione ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.35s ease both; }
+
+    /* ── Header logo ── */
+    .page-logo {
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+    .page-logo a {
+      display: inline-block;
+      text-decoration: none;
+    }
+    .page-logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    /* ── Loading spinner ── */
+    .spinner {
+      width: 20px; height: 20px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .error-msg {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 0.625rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      color: #fca5a5;
+      margin-bottom: 1rem;
+      display: none;
+    }
+    .error-msg.visible { display: block; }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!-- Logo -->
+    <div class="page-logo">
+      <a href="https://antonioilacqua.it">
+        <img src="https://www.antonioilacqua.it/asset/img/antonioilacqua-design-logo.png"
+             alt="Antonio Ilacqua – Web Designer"
+             loading="eager" />
+      </a>
+    </div>
+
+    <!-- Card principale -->
+    <div class="card fade-up">
+
+      <!-- Steps -->
+      <div class="steps-row" id="stepsRow">
+        <div class="step active" id="stepInd1">1. Giorno</div>
+        <div class="step" id="stepInd2">2. Orario</div>
+        <div class="step" id="stepInd3">3. Conferma</div>
+      </div>
+
+      <!-- Badge cliente personalizzato -->
+      <div class="client-badge" id="clientBadge" style="display:none">
+        <strong id="badgeName"></strong>, hai richiesto un sito
+        <strong id="badgeTipo"></strong> per la tua attività da <strong id="badgeAttivita"></strong>.
+        <br>
+        Stima di massima: <span class="budget-pill" id="badgeBudget"></span>
+      </div>
+
+      <!-- STEP 1: Scegli giorno -->
+      <div class="step-panel active" id="panel1">
+        <h2 style="font-size:1.75rem; margin:0 0 0.375rem;">Scegli un giorno</h2>
+        <p style="color:var(--text-muted); font-size:0.875rem; margin:0 0 1.25rem;">
+          Seleziona uno dei prossimi giorni disponibili per la call conoscitiva.
+        </p>
+        <div class="calendar-grid" id="calendarGrid"></div>
+        <div style="text-align:right; font-size:0.75rem; color:var(--text-muted); margin-top:-0.5rem; margin-bottom:0.5rem;" id="weekNav">
+          <button id="btnPrevWeek" onclick="shiftWeek(-1)" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.75rem;padding:0.25rem 0.5rem;">← Settimana prec.</button>
+          <button id="btnNextWeek" onclick="shiftWeek(1)" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.75rem;padding:0.25rem 0.5rem;">Settimana succ. →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Scegli orario -->
+      <div class="step-panel" id="panel2">
+        <button onclick="goStep(1)" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.8125rem;padding:0;margin-bottom:1rem;">← Torna al calendario</button>
+        <h2 style="font-size:1.75rem; margin:0 0 0.375rem;">Scegli l'orario</h2>
+        <p style="color:var(--text-muted); font-size:0.875rem; margin:0 0 1.25rem;" id="selectedDayLabel"></p>
+
+        <div class="slots-label">Mattina</div>
+        <div class="slots-grid" id="slotsMattina"></div>
+        <div class="slots-label">Pomeriggio</div>
+        <div class="slots-grid" id="slotsPomeriggio"></div>
+      </div>
+
+      <!-- STEP 3: Conferma dati -->
+      <div class="step-panel" id="panel3">
+        <button onclick="goStep(2)" style="background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:0.8125rem;padding:0;margin-bottom:1rem;">← Torna agli orari</button>
+        <h2 style="font-size:1.75rem; margin:0 0 0.375rem;">Conferma i tuoi dati</h2>
+        <p style="color:var(--text-muted); font-size:0.875rem; margin:0 0 1.25rem;">Verifica o aggiorna le info per ricevere la conferma via email.</p>
+
+        <div class="form-group">
+          <label for="inputNome">Nome e cognome</label>
+          <input type="text" id="inputNome" placeholder="Mario Rossi" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="email" id="inputEmail" placeholder="mario@esempio.it" autocomplete="email" />
+        </div>
+
+        <div class="form-group">
+          <label>Durata della call</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;">
+            <button type="button" class="durata-btn selected" id="durata20" onclick="selectDurata('20min', this)">
+              <span style="display:block; font-size:1.125rem; font-weight:800;">~20 min</span>
+              <span style="display:block; font-size:0.6875rem; color:var(--text-muted); margin-top:0.2rem;">Call conoscitiva</span>
+            </button>
+            <button type="button" class="durata-btn" id="durata1h" onclick="selectDurata('1h', this)">
+              <span style="display:block; font-size:1.125rem; font-weight:800;">1 ora</span>
+              <span style="display:block; font-size:0.6875rem; color:var(--text-muted); margin-top:0.2rem;">Consulenza approfondita</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="riepilogo-box visible" id="riepilogoBox">
+          <div class="riepilogo-row">
+            <span>Giorno</span>
+            <span id="riepilogoGiorno">—</span>
+          </div>
+          <div class="riepilogo-row">
+            <span>Orario</span>
+            <span id="riepilogoOrario">—</span>
+          </div>
+          <div class="riepilogo-row">
+            <span>Durata</span>
+            <span id="riepilogoDurata">~20 minuti</span>
+          </div>
+          <div class="riepilogo-row" id="riepilogoTipoRow" style="display:none">
+            <span>Progetto</span>
+            <span id="riepilogoTipo">—</span>
+          </div>
+        </div>
+
+        <div class="error-msg" id="errorMsg">
+          Si è verificato un errore. Riprova o scrivimi direttamente a <strong>ciao@antonioilacqua.it</strong>
+        </div>
+
+        <button class="btn-primary" id="btnConferma" onclick="submitBooking()">
+          Conferma prenotazione
+        </button>
+        <p style="text-align:center; font-size:0.6875rem; color:var(--text-muted); margin-top:0.625rem;">
+          Riceverai una email di conferma con i dettagli della call.
+        </p>
+      </div>
+
+      <!-- STEP SUCCESS -->
+      <div class="step-panel" id="panelSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#009640" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2 style="font-size:2rem; text-align:center; margin:0 0 0.5rem;">Prenotato!</h2>
+        <p style="text-align:center; color:var(--text-muted); font-size:0.9375rem; margin:0 0 1.5rem; line-height:1.6;">
+          Ho ricevuto la tua prenotazione — ti mando subito una conferma a <strong id="successEmail" style="color:#fff"></strong>.
+          <br><br>
+          Ci vediamo <strong id="successDateTime" style="color:var(--neon)"></strong>.
+        </p>
+
+        <div class="riepilogo-box visible" id="riepilogoSuccess">
+          <div class="riepilogo-row">
+            <span>Giorno</span>
+            <span id="successRiepilogoGiorno">—</span>
+          </div>
+          <div class="riepilogo-row">
+            <span>Orario</span>
+            <span id="successRiepilogoOrario">—</span>
+          </div>
+          <div class="riepilogo-row">
+            <span>Durata</span>
+            <span id="successRiepilogoDurata">~20 minuti</span>
+          </div>
+          <div class="riepilogo-row">
+            <span>Modalità</span>
+            <span>Google Meet / Telefono</span>
+          </div>
+        </div>
+
+        <a href="https://antonioilacqua.it" class="btn-secondary" style="display:block;text-align:center;text-decoration:none;padding:0.75rem;border:1px solid var(--border);border-radius:0.75rem;color:var(--text-muted);font-size:0.875rem;margin-top:0;">
+          Torna al sito
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Footer note -->
+    <p class="footer-note">
+      Hai bisogno di aiuto? Scrivimi a <a href="mailto:ciao@antonioilacqua.it">ciao@antonioilacqua.it</a>
+      o chiamami al <a href="tel:+393475540816">+39 347 554 0816</a>
+    </p>
+
+  </div>
+
+  <script>
+    // ── CONFIG ──────────────────────────────────────────────────────────
+    const WEBHOOK_URL = 'https://aideesign.app.n8n.cloud/webhook/397c9aa7-2bb8-49a4-85c1-78fc1928c907'; // <-- sostituire con URL n8n reale
+
+    const SLOT_MATTINA    = ['09:00','09:30','10:00','10:30','11:00','11:30'];
+    const SLOT_POMERIGGIO = ['14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30'];
+    const DAYS_ITA        = ['Dom','Lun','Mar','Mer','Gio','Ven','Sab'];
+    const MONTHS_ITA      = ['gen','feb','mar','apr','mag','giu','lug','ago','set','ott','nov','dic'];
+    const MONTHS_FULL     = ['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+    const DAYS_FULL       = ['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+
+    // ── STATE ────────────────────────────────────────────────────────────
+    let currentStep  = 1;
+    let selectedDate = null;   // Date object
+    let selectedSlot = null;   // stringa "10:00"
+    let selectedDurata = '20min'; // '20min' | '1h'
+    let weekOffset   = 0;      // settimane relative da oggi
+
+    // Dati cliente da URL params
+    const params     = new URLSearchParams(window.location.search);
+    const pNome      = params.get('nome')      || '';
+    const pEmail     = params.get('email')     || '';
+    const pTipoSito  = params.get('tipo_sito') || '';
+    const pAttivita  = params.get('attivita')  || '';
+    const pExtra     = params.get('extra')     || '';
+    const pBudgetMin = params.get('budget_min')|| '';
+    const pBudgetMax = params.get('budget_max')|| '';
+
+    // ── INIT ─────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+      // Compila badge cliente
+      if (pNome || pTipoSito) {
+        const badge = document.getElementById('clientBadge');
+        badge.style.display = 'block';
+        if (pNome)      document.getElementById('badgeName').textContent      = pNome;
+        if (pTipoSito)  document.getElementById('badgeTipo').textContent      = pTipoSito;
+        if (pAttivita)  document.getElementById('badgeAttivita').textContent  = pAttivita;
+        const budgetValido = pBudgetMin && pBudgetMax && pBudgetMin !== '0' && pBudgetMax !== '0';
+        if (budgetValido) {
+          document.getElementById('badgeBudget').textContent = `€${pBudgetMin} – €${pBudgetMax}`;
+        } else {
+          document.getElementById('badgeBudget').style.display = 'none';
+        }
+      }
+
+      // Pre-compila form
+      document.getElementById('inputNome').value  = pNome;
+      document.getElementById('inputEmail').value = pEmail;
+
+      // Riepilogo tipo progetto
+      if (pTipoSito) {
+        const row = document.getElementById('riepilogoTipoRow');
+        row.style.display = 'flex';
+        document.getElementById('riepilogoTipo').textContent =
+          pTipoSito + (pExtra ? ' + ' + pExtra : '');
+      }
+
+      renderCalendar();
+    });
+
+    // ── CALENDARIO ───────────────────────────────────────────────────────
+    function getBusinessDays(weekOff) {
+      const today  = new Date();
+      today.setHours(0,0,0,0);
+      const result = [];
+
+      // Start dal lunedì della settimana corrente + offset
+      const day    = today.getDay();
+      const monday = new Date(today);
+      monday.setDate(today.getDate() - (day === 0 ? 6 : day - 1) + weekOff * 7);
+
+      for (let i = 0; i < 5; i++) {
+        const d = new Date(monday);
+        d.setDate(monday.getDate() + i);
+        // Salta giorni passati e il giorno corrente (solo per settimana 0)
+        if (weekOff === 0 && d <= today) { result.push(null); continue; }
+        result.push(d);
+      }
+      return result;
+    }
+
+    function renderCalendar() {
+      const grid = document.getElementById('calendarGrid');
+      grid.innerHTML = '';
+      const days = getBusinessDays(weekOffset);
+      const today = new Date(); today.setHours(0,0,0,0);
+
+      // Navigazione: nascondi "precedente" se siamo alla settimana corrente
+      document.getElementById('btnPrevWeek').style.opacity = weekOffset <= 0 ? '0.3' : '1';
+      document.getElementById('btnPrevWeek').style.pointerEvents = weekOffset <= 0 ? 'none' : 'auto';
+      // Blocca dopo 4 settimane
+      document.getElementById('btnNextWeek').style.opacity = weekOffset >= 3 ? '0.3' : '1';
+      document.getElementById('btnNextWeek').style.pointerEvents = weekOffset >= 3 ? 'none' : 'auto';
+
+      let hasAny = false;
+      days.forEach(d => {
+        const btn = document.createElement('button');
+        btn.className = 'day-btn';
+        if (!d) {
+          btn.disabled = true;
+          btn.style.opacity = '0.2';
+          btn.innerHTML = '<span class="day-name">—</span><span class="day-num">—</span>';
+          grid.appendChild(btn);
+          return;
+        }
+        hasAny = true;
+        const isSelected = selectedDate && d.toDateString() === selectedDate.toDateString();
+        if (isSelected) btn.classList.add('selected');
+        const dn   = DAYS_ITA[d.getDay()];
+        const num  = d.getDate();
+        const mon  = MONTHS_ITA[d.getMonth()];
+        btn.innerHTML = `<span class="day-name">${dn}</span><span class="day-num">${num}</span><span class="day-month">${mon}</span>`;
+        btn.addEventListener('click', () => selectDay(d));
+        grid.appendChild(btn);
+      });
+
+      // Se la settimana corrente ha tutti i giorni passati, vai avanti
+      if (!hasAny && weekOffset === 0) {
+        weekOffset = 1;
+        renderCalendar();
+      }
+    }
+
+    function shiftWeek(dir) {
+      if (weekOffset + dir < 0) return;
+      if (weekOffset + dir > 3) return;
+      weekOffset += dir;
+      renderCalendar();
+    }
+
+    function selectDay(d) {
+      selectedDate = d;
+      selectedSlot = null;
+      renderSlots();
+      goStep(2);
+    }
+
+    // ── SLOT ORARI ───────────────────────────────────────────────────────
+    function renderSlots() {
+      const label = document.getElementById('selectedDayLabel');
+      const dStr  = DAYS_FULL[selectedDate.getDay()];
+      const dNum  = selectedDate.getDate();
+      const dMon  = MONTHS_FULL[selectedDate.getMonth()];
+      label.textContent = `${dStr} ${dNum} ${dMon}`;
+
+      renderSlotGroup('slotsMattina',    SLOT_MATTINA);
+      renderSlotGroup('slotsPomeriggio', SLOT_POMERIGGIO);
+    }
+
+    function renderSlotGroup(containerId, slots) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = '';
+      slots.forEach(s => {
+        const btn = document.createElement('button');
+        btn.className = 'slot-btn';
+        if (s === selectedSlot) btn.classList.add('selected');
+        btn.textContent = s;
+        btn.addEventListener('click', () => selectSlot(s));
+        container.appendChild(btn);
+      });
+    }
+
+    function selectSlot(s) {
+      selectedSlot = s;
+      // Aggiorna riepilogo
+      const gLabel = formatDateLabel(selectedDate);
+      document.getElementById('riepilogoGiorno').textContent = gLabel;
+      document.getElementById('riepilogoOrario').textContent = s;
+      goStep(3);
+    }
+
+    function formatDateLabel(d) {
+      const dn  = DAYS_FULL[d.getDay()];
+      const num = d.getDate();
+      const mon = MONTHS_FULL[d.getMonth()];
+      const yr  = d.getFullYear();
+      return `${dn} ${num} ${mon} ${yr}`;
+    }
+
+    function selectDurata(val, btn) {
+      selectedDurata = val;
+      document.querySelectorAll('.durata-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      const label = val === '1h' ? '1 ora' : '~20 minuti';
+      document.getElementById('riepilogoDurata').textContent = label;
+    }
+
+    function formatDateISO(d) {
+      const y  = d.getFullYear();
+      const m  = String(d.getMonth() + 1).padStart(2,'0');
+      const dd = String(d.getDate()).padStart(2,'0');
+      return `${y}-${m}-${dd}`;
+    }
+
+    // ── NAVIGAZIONE STEP ─────────────────────────────────────────────────
+    function goStep(n) {
+      currentStep = n;
+      document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+      const targetPanel = n === 'success' ? 'panelSuccess' : `panel${n}`;
+      document.getElementById(targetPanel).classList.add('active');
+
+      // Steps indicator
+      if (n !== 'success') {
+        document.querySelectorAll('.steps-row .step').forEach((el, i) => {
+          el.classList.remove('active','done');
+          if (i + 1 < n)      el.classList.add('done');
+          else if (i + 1 === n) el.classList.add('active');
+        });
+      } else {
+        document.getElementById('stepsRow').style.display = 'none';
+      }
+
+      // Ri-renderizza calendario se si torna al passo 1
+      if (n === 1) renderCalendar();
+      if (n === 2 && selectedDate) renderSlots();
+    }
+
+    // ── SUBMIT ───────────────────────────────────────────────────────────
+    async function submitBooking() {
+      const nome  = document.getElementById('inputNome').value.trim();
+      const email = document.getElementById('inputEmail').value.trim();
+      const errEl = document.getElementById('errorMsg');
+      errEl.classList.remove('visible');
+
+      if (!nome || !email) {
+        errEl.textContent = 'Inserisci nome e email per procedere.';
+        errEl.classList.add('visible');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errEl.textContent = "L'indirizzo email non è valido.";
+        errEl.classList.add('visible');
+        return;
+      }
+      if (!selectedDate || !selectedSlot) {
+        errEl.textContent = 'Seleziona giorno e orario prima di confermare.';
+        errEl.classList.add('visible');
+        return;
+      }
+
+      const btn = document.getElementById('btnConferma');
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span>Invio in corso…';
+
+      const payload = {
+        nome_cliente : nome,
+        email        : email,
+        giorno       : formatDateLabel(selectedDate),
+        orario       : selectedSlot,
+        data_iso     : formatDateISO(selectedDate),
+        tipo_sito    : pTipoSito,
+        attivita     : pAttivita,
+        extra        : pExtra,
+        budget_min   : pBudgetMin,
+        budget_max   : pBudgetMax,
+        durata_minuti: selectedDurata === '1h' ? 60 : 20,
+        fonte        : 'landing-prenota-call'
+      };
+
+      try {
+        // application/x-www-form-urlencoded è una "simple request":
+        // nessun preflight CORS → funziona col webhook-test e col webhook produzione.
+        // n8n espone i campi direttamente in $json.body.nome_cliente, ecc.
+        await fetch(WEBHOOK_URL, {
+          method : 'POST',
+          mode   : 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body   : new URLSearchParams(payload).toString()
+        });
+        document.getElementById('successEmail').textContent          = email;
+        document.getElementById('successDateTime').textContent       = `${formatDateLabel(selectedDate)} alle ${selectedSlot}`;
+        document.getElementById('successRiepilogoGiorno').textContent = formatDateLabel(selectedDate);
+        document.getElementById('successRiepilogoOrario').textContent = selectedSlot;
+        document.getElementById('successRiepilogoDurata').textContent = selectedDurata === '1h' ? '1 ora' : '~20 minuti';
+
+        goStep('success');
+
+      } catch (err) {
+        console.error(err);
+        errEl.textContent = 'Errore di rete. Controlla la connessione o scrivimi direttamente.';
+        errEl.classList.add('visible');
+        btn.disabled = false;
+        btn.innerHTML = 'Conferma prenotazione';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+<head>
+    <!-- Google tag (gtag.js) – Consent Mode v2 -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZHP3MV6NG"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-2ZHP3MV6NG');
+    </script>
+        <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K5WNP2PV');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Web Designer Milazzo | Creazione Siti Web Messina e Sicilia | Studio Design</title>
+    <meta name="description" content="Realizzo siti web professionali per PMI a Milazzo, Messina e in tutta la Sicilia. 5+ anni di esperienza in web design e comunicazione visiva. Richiedi un preventivo.">
+    <link rel="canonical" href="https://tuosito.it/">
+
+    <meta property="og:title" content="Siti web che convertono — Web Designer a Milazzo e Messina">
+    <meta property="og:description" content="Trasforma il tuo sito da vetrina a motore di business con un design su misura.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tuosito.it/og-image.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --color-accent: #009640;
+            --color-accent-dim: #007a33;
+            --color-dark: #27292b;
+            --color-light: #FFFAFA;
+            --color-muted: #6b6e70;
+            --bg-body: var(--color-dark);
+            --text-main: var(--color-light);
+            --card-bg: #323538;
+            --transition: 0.3s ease;
+            --header-bg: rgba(39, 41, 43, 0.9);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            transition: background-color var(--transition), color var(--transition);
+        }
+
+        h1, h2, h3 { font-family: 'Syne', sans-serif; text-transform: uppercase; }
+        .mono { font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--color-accent); }
+
+        /* Layout */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 5rem 0; }
+        .grid { display: grid; gap: 2rem; }
+
+        /* Header & Nav */
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: var(--header-bg); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        nav { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.5rem; color: var(--color-accent); text-decoration: none; }
+        
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 500; font-size: 0.9rem; transition: 0.2s; }
+        .nav-links a:hover { color: var(--color-accent); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block; padding: 0.8rem 1.8rem; border-radius: 4px;
+            font-weight: 700; text-decoration: none; transition: var(--transition);
+            cursor: pointer; border: none; font-size: 0.9rem;
+        }
+        .btn-primary { background: var(--color-accent); color: white; }
+        .btn-primary:hover { background: var(--color-accent-dim); transform: translateY(-2px); }
+        .btn-outline { border: 2px solid var(--color-accent); color: var(--text-main); }
+        .btn-outline:hover { background: var(--color-accent); color: white; }
+
+        /* Hero */
+        .hero { min-height: 90vh; display: flex; align-items: center; text-align: center; padding-top: 100px; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1; margin-bottom: 1.5rem; }
+        .hero p { max-width: 600px; margin: 0 auto 2rem; font-size: 1.2rem; color: var(--color-muted); }
+        .hero-btns { display: flex; gap: 1rem; justify-content: center; }
+
+        /* Cards */
+        .card { 
+            background: var(--card-bg); padding: 2.5rem; border-radius: 8px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition);
+        }
+        .card:hover { transform: translateY(-5px); border-bottom: 3px solid var(--color-accent); }
+        .card i { color: var(--color-accent); margin-bottom: 1rem; }
+
+        /* Services Grid */
+        .services-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+        /* FAQ Accordion */
+        .faq-item { border-bottom: 1px solid var(--color-muted); padding: 1rem 0; cursor: pointer; }
+        .faq-question { display: flex; justify-content: space-between; font-weight: 700; }
+        .faq-answer { display: none; padding-top: 1rem; color: var(--color-muted); }
+        .faq-item.active .faq-answer { display: block; }
+
+        /* Contact Form */
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        form { display: grid; gap: 1rem; }
+        input, textarea { 
+            padding: 1rem; border: 1px solid var(--color-muted); background: var(--bg-body); 
+            color: var(--text-main); border-radius: 4px; font-family: inherit;
+        }
+        input:focus { outline: 2px solid var(--color-accent); }
+
+        /* Footer */
+        footer { padding: 3rem 0; border-top: 1px solid rgba(0,0,0,0.1); text-align: center; }
+        .social-links { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; }
+
+        /* Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 768px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .nav-links { display: none; } /* Mobile menu simplified for brevity */
+            .hero-btns { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5WNP2PV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">STUDIO.DESIGN</a>
+                <div class="nav-links">
+                    <a href="#servizi">Servizi</a>
+                    <a href="#chi-sono">Chi Sono</a>
+                    <a href="#portfolio">Lavori</a>
+                    <a href="#contatti" class="btn btn-primary" style="padding: 0.5rem 1rem;">Parliamo del tuo sito</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero reveal">
+            <div class="container">
+                <span class="mono">Disponibile a Milazzo, Messina & Remoto</span>
+                <h1>Siti web che <span style="color: var(--color-accent);">convertono</span></h1>
+                <p>Realizzo siti web professionali per PMI che vogliono crescere online. Non solo belli — funzionali, veloci e misurabili.</p>
+                <div class="hero-btns">
+                    <a href="#contatti" class="btn btn-primary">Richiedi un preventivo</a>
+                    <a href="#portfolio" class="btn btn-outline">Guarda i miei lavori</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: rgba(0,150,64,0.05);">
+            <div class="container grid services-grid">
+                <div class="card reveal">
+                    <i data-lucide="trending-up"></i>
+                    <h3>Sito inefficace?</h3>
+                    <p>Ti aiuto a trasformare il tuo vecchio sito vetrina in un vero asset commerciale che genera contatti.</p>
+                </div>
+                <div class="card reveal">
+                    <i data-lucide="target"></i>
+                    <h3>Zero Risultati?</h3>
+                    <p>Smetti di sprecare budget in ADS senza una landing page ottimizzata per la conversione.</p>
+                </div>
+                <div class="card reveal">
+                    <i data-lucide="award"></i>
+                    <h3>Template anonimi?</h3>
+                    <p>Distinguerti dalla concorrenza con un design su misura basato sulla comunicazione visiva.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servizi" class="reveal">
+            <div class="container">
+                <h2 style="margin-bottom: 3rem; text-align: center;">Servizi di Web Design a Milazzo</h2>
+                <div class="grid services-grid">
+                    <div>
+                        <span class="mono">01.</span>
+                        <h3>Siti Vetrina & Corporate</h3>
+                        <p>La tua presenza digitale professionale, ottimizzata per ogni dispositivo.</p>
+                    </div>
+                    <div>
+                        <span class="mono">02.</span>
+                        <h3>Landing Page</h3>
+                        <p>Pagine ad alto tasso di conversione per le tue campagne marketing.</p>
+                    </div>
+                    <div>
+                        <span class="mono">03.</span>
+                        <h3>E-commerce</h3>
+                        <p>Soluzioni scalabili per vendere i tuoi prodotti online in sicurezza.</p>
+                    </div>
+                    <div>
+                        <span class="mono">04.</span>
+                        <h3>SEO Locale</h3>
+                        <p>Fatti trovare dai clienti a Milazzo, Messina e in tutta la Sicilia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chi-sono" style="background: var(--card-bg);" class="reveal">
+            <div class="container contact-wrapper">
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">Qualità, Trasparenza, <br>Risultati.</h2>
+                    <p>Con oltre 5 anni di esperienza e un background in <strong>Design della Comunicazione Visiva</strong>, non mi limito a "creare siti", ma costruisco l'identità digitale della tua azienda.</p>
+                    <p style="margin-top: 1rem;">Lavoro con PMI siciliane che cercano un partner affidabile per scalare il proprio business.</p>
+                    <div style="margin-top: 2rem;">
+                        <span class="btn btn-outline">5+ Anni Exp.</span>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <div style="width: 300px; height: 300px; background: var(--color-accent); border-radius: 50%; opacity: 0.2;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="container" style="max-width: 800px;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Domande Frequenti</h2>
+                <div class="faq-item">
+                    <div class="faq-question">Quanto costa un sito web? <i data-lucide="plus"></i></div>
+                    <div class="faq-answer">Ogni progetto è unico. I prezzi variano in base alla complessità, ma fornisco sempre un preventivo dettagliato e trasparente dopo la prima consulenza.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quanto tempo ci vuole? <i data-lucide="plus"></i></div>
+                    <div class="faq-answer">In genere da 3 a 6 settimane a seconda della tipologia di sito (Vetrina vs E-commerce).</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Lavori anche fuori dalla Sicilia? <i data-lucide="plus"></i></div>
+                    <div class="faq-answer">Certamente. Sebbene abbia base a Milazzo, collaboro con clienti in tutta Italia tramite meeting da remoto.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contatti" class="reveal">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div>
+                        <h2>Parliamo del tuo progetto</h2>
+                        <p style="margin: 1.5rem 0;">Hai un'idea o vuoi migliorare la tua presenza online? Scrivimi e ti risponderò entro 24 ore.</p>
+                        <p class="mono">Email: info@tuosito.it</p>
+                        <p class="mono">WhatsApp: +39 123 456 7890</p>
+                    </div>
+                    <form action="#" method="POST">
+                        <input type="text" name="nome" placeholder="Nome e Cognome" required>
+                        <input type="email" name="email" placeholder="Tua Email" required>
+                        <input type="tel" name="phone" placeholder="Telefono">
+                        <textarea name="messaggio" rows="5" placeholder="Parlami del tuo progetto..." required></textarea>
+                        <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo">STUDIO.DESIGN</div>
+            <div class="social-links">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 Nome Cognome | P.IVA 0123456789</p>
+            <div style="margin-top: 1rem; font-size: 0.8rem;">
+                <a href="/privacy-policy.html">Privacy Policy</a> · <a href="/cookie-policy.html">Cookie Policy</a> · <button id="open-cookie-settings" onclick="window.cookieConsent && window.cookieConsent.show()" style="background:none;border:none;cursor:pointer;color:inherit;font-size:inherit;">Gestisci cookie</button>
+            </div>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Studio Design Milazzo",
+      "image": "https://tuosito.it/logo.png",
+      "@id": "",
+      "url": "https://tuosito.it",
+      "telephone": "+391234567890",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Giacomo Medici",
+        "addressLocality": "Milazzo",
+        "postalCode": "98057",
+        "addressRegion": "ME",
+        "addressCountry": "IT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.218,
+        "longitude": 15.242
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+
+    <script>
+        // Inizializza Icone
+        lucide.createIcons();
+
+        // Dark/Light Mode Toggle
+
+        // Sticky Header & Reveal on Scroll
+        const header = document.getElementById('header');
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, observerOptions);
+
+        reveals.forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                const icon = item.querySelector('i');
+                const isActive = item.classList.contains('active');
+                icon.setAttribute('data-lucide', isActive ? 'minus' : 'plus');
+                lucide.createIcons();
+            });
+        });
+    </script>
+    <script src="/asset/js/cookie-consent.js"></script>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/message/K25MOPDXM2IFJ1" target="_blank" rel="noopener noreferrer" aria-label="Contattami su WhatsApp" class="wa-float">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.428a.75.75 0 0 0 .916.916l5.604-1.47A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.66-.49-5.2-1.348l-.374-.214-3.875 1.016 1.021-3.763-.228-.386A10 10 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+    </a>
+</body>
+</html>
