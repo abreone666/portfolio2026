@@ -2,8 +2,17 @@
 (function () {
 
   function init() {
-    const wa = document.querySelector('.wa-float');
-    if (wa) wa.style.bottom = '90px';
+    const wa  = document.querySelector('.wa-float');
+    const fab = document.getElementById('quiz-fab');
+
+    function shiftUp() {
+      if (wa)  wa.style.bottom  = '80px';
+      if (fab) fab.style.bottom = '148px'; /* 80 + 56 + 12 */
+    }
+    function shiftDown() {
+      if (wa)  wa.style.bottom  = '';
+      if (fab) fab.style.bottom = '';
+    }
 
     const bar = document.createElement('div');
     bar.id = 'floating-cta-bar';
@@ -51,11 +60,12 @@
     closeBtn.addEventListener('click', () => {
       bar.style.transform = 'translateY(100%)';
       sessionStorage.setItem('floatingCtaDismissed', '1');
-      if (wa) wa.style.bottom = '';
+      shiftDown();
     });
 
     ctaBtn.addEventListener('click', () => {
       bar.style.transform = 'translateY(100%)';
+      shiftDown();
     });
 
     if (sessionStorage.getItem('floatingCtaDismissed')) return;
@@ -67,6 +77,7 @@
       if (scrolled >= 0.3) {
         shown = true;
         bar.style.transform = 'translateY(0)';
+        shiftUp();
         window.removeEventListener('scroll', checkScroll);
       }
     }
