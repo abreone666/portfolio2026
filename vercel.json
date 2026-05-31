@@ -1,6 +1,16 @@
 {
+  "redirects": [
+    { "source": "/servizi/siti-vetrina.html", "destination": "/servizi/realizzazione-siti-web-milazzo/", "permanent": true },
+    { "source": "/servizi/e-commerce.html", "destination": "/servizi/ecommerce-woocommerce-milazzo/", "permanent": true },
+    { "source": "/servizi/local-seo.html", "destination": "/servizi/consulenza-local-seo-milazzo/", "permanent": true },
+    { "source": "/servizi/rebranding.html", "destination": "/servizi/rebranding-identita-visiva-milazzo/", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/contact.php", "destination": "/api/contact" }
+    { "source": "/contact.php", "destination": "/api/contact" },
+    { "source": "/servizi/realizzazione-siti-web-milazzo/", "destination": "/servizi/siti-vetrina.html" },
+    { "source": "/servizi/ecommerce-woocommerce-milazzo/", "destination": "/servizi/e-commerce.html" },
+    { "source": "/servizi/consulenza-local-seo-milazzo/", "destination": "/servizi/local-seo.html" },
+    { "source": "/servizi/rebranding-identita-visiva-milazzo/", "destination": "/servizi/rebranding.html" }
   ],
   "headers": [
     {

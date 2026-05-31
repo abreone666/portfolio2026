@@ -1,0 +1,48 @@
+Options -Indexes
+
+# Forza HTTPS + www canonical
+RewriteEngine On
+
+# Da http a https (qualunque dominio)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Da non-www a www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# URL pulite per pagine servizi (301 redirect + rewrite interno)
+RewriteRule ^servizi/realizzazione-siti-web-milazzo/?$ /servizi/siti-vetrina.html [L]
+RewriteRule ^servizi/ecommerce-woocommerce-milazzo/?$ /servizi/e-commerce.html [L]
+RewriteRule ^servizi/consulenza-local-seo-milazzo/?$ /servizi/local-seo.html [L]
+RewriteRule ^servizi/rebranding-identita-visiva-milazzo/?$ /servizi/rebranding.html [L]
+
+# Redirect 301 da .html a slug pulito per servizi
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/servizi/siti-vetrina\.html
+RewriteRule ^ /servizi/realizzazione-siti-web-milazzo/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/servizi/e-commerce\.html
+RewriteRule ^ /servizi/ecommerce-woocommerce-milazzo/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/servizi/local-seo\.html
+RewriteRule ^ /servizi/consulenza-local-seo-milazzo/ [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/servizi/rebranding\.html
+RewriteRule ^ /servizi/rebranding-identita-visiva-milazzo/ [R=301,L]
+
+# Sicurezza header
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Cache per asset statici
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
