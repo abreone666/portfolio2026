@@ -57,26 +57,33 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ status: 'error', message: 'Configurazione email mancante.' });
   }
 
-  const resendRes = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: 'Portfolio <noreply@antonioilacqua.it>',
-      to: ['info@antonioilacqua.it'],
-      reply_to: email,
-      subject: 'Nuovo Messaggio dal Portfolio',
-      text: emailText,
-    }),
-  });
+  try {
+    const resendRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Portfolio <noreply@antonioilacqua.it>',
+        to: ['info@antonioilacqua.it'],
+        reply_to: email,
+        subject: 'Nuovo Messaggio dal Portfolio',
+        text: emailText,
+      }),
+    });
 
-  if (resendRes.ok) {
-    return res.status(200).json({ status: 'success', message: 'Grazie! Il tuo messaggio è stato inviato correttamente.' });
+    if (resendRes.ok) {
+      return res.status(200).json({ status: 'success', message: 'Grazie! Il tuo messaggio è stato inviato correttamente.' });
+    }
+
+    const resendError = await resendRes.text().catch(() => '');
+    console.error('Resend error:', resendRes.status, resendError);
+    return res.status(500).json({ status: 'error', message: "Ops! Qualcosa è andato storto. Riprova più tardi." });
+  } catch (err) {
+    console.error('Resend fetch failed:', err);
+    return res.status(500).json({ status: 'error', message: "Errore nell'invio dell'email. Riprova più tardi." });
   }
-
-  return res.status(500).json({ status: 'error', message: "Ops! Qualcosa è andato storto. Riprova più tardi." });
 }
 
 function sanitize(str) {
