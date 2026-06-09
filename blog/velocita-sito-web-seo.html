@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZHP3MV6NG"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-2ZHP3MV6NG');
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Velocità del sito web: come misurarla e migliorarla per il SEO – Antonio Ilacqua</title>
+    <meta name="description" content="Ogni secondo di caricamento in più costa clienti e ranking. Le 6 tecniche concrete per velocizzare il sito, gli strumenti gratuiti e l'impatto reale sul SEO nel 2026." />
+    <link rel="canonical" href="https://www.antonioilacqua.it/blog/velocita-sito-web-seo.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Velocità del sito web: come misurarla e migliorarla per il SEO" />
+    <meta property="og:description" content="Ogni secondo di caricamento in più costa clienti e ranking. Le 6 tecniche concrete per velocizzare il sito, gli strumenti gratuiti e l'impatto reale sul SEO nel 2026." />
+    <meta property="og:url" content="https://www.antonioilacqua.it/blog/velocita-sito-web-seo.html" />
+    <meta property="og:image" content="https://www.antonioilacqua.it/asset/img/og-blog.jpg" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Antonio Ilacqua – Web Designer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Velocità del sito web: come misurarla e migliorarla per il SEO" />
+    <meta name="twitter:description" content="Ogni secondo di caricamento in più costa clienti e ranking. Le 6 tecniche concrete per velocizzare il sito, gli strumenti gratuiti e l'impatto reale sul SEO nel 2026." />
+    <meta name="twitter:image" content="https://www.antonioilacqua.it/asset/img/og-blog.jpg" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="geo.region" content="IT-ME" />
+    <meta name="geo.placename" content="Milazzo" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.antonioilacqua.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.antonioilacqua.it/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Velocità del sito web: come misurarla e migliorarla per il SEO", "item": "https://www.antonioilacqua.it/blog/velocita-sito-web-seo.html" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Velocità del sito web: come misurarla e migliorarla per il SEO",
+          "description": "Ogni secondo di caricamento in più costa clienti e ranking. Le 6 tecniche concrete per velocizzare il sito, gli strumenti gratuiti e l'impatto reale sul SEO nel 2026.",
+          "datePublished": "2026-06-27",
+          "dateModified": "2026-06-27",
+          "image": "https://www.antonioilacqua.it/asset/img/og-blog.jpg",
+          "author": { "@type": "Person", "name": "Antonio Ilacqua", "url": "https://www.antonioilacqua.it" },
+          "publisher": { "@type": "Organization", "name": "Antonio Ilacqua – Web Designer", "url": "https://www.antonioilacqua.it" },
+          "mainEntityOfPage": "https://www.antonioilacqua.it/blog/velocita-sito-web-seo.html"
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+        .blog-article { font-family: 'Montserrat', sans-serif; }
+        .blog-article h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #0c1d1b; margin: 2.5rem 0 1rem; letter-spacing: 0.02em; }
+        .blog-article p { color: #374151; line-height: 1.8; margin-bottom: 1.25rem; }
+        .blog-article ul, .blog-article ol { color: #374151; }
+        .blog-article li { line-height: 1.8; margin-bottom: 0.5rem; }
+        .toc-link { color: #009640; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .toc-link:hover { text-decoration: underline; }
+        .highlight-box { background: #f0faf4; border-left: 4px solid #009640; padding: 1.25rem 1.5rem; border-radius: 0 10px 10px 0; margin: 2rem 0; }
+        .highlight-box p { margin: 0; font-size: 0.92rem; }
+        .sources-box { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 3rem; }
+        .sources-box p.label { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; color: #6b7280; letter-spacing: 0.08em; margin: 0 0 0.5rem; }
+        .sources-box ul { padding-left: 1.2rem; margin: 0; }
+        .sources-box li { font-size: 0.82rem; color: #6b7280; margin-bottom: 0.3rem; }
+    </style>
+</head>
+
+<body class="bg-[#020305] font-sans antialiased">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass-header border-b border-primary/10 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <a href="/index.html" class="flex items-center gap-3 group">
+                <div class="h-10 transition-transform group-hover:scale-105">
+                    <img src="/asset/img/antonioilacqua-design-logo.png" alt="Antonio Ilacqua" class="h-full w-auto">
+                </div>
+            </a>
+            <div class="relative">
+                <button id="nav-menu-button" aria-expanded="false" aria-label="Apri menu"
+                    class="flex items-center gap-2 text-sm font-bold border border-primary/20 px-4 py-2.5 rounded-xl hover:bg-primary/5 transition-colors">
+                    Menu
+                    <span id="nav-menu-icon" class="material-symbols-outlined text-[20px] transition-transform duration-200">menu</span>
+                </button>
+                <div id="nav-dropdown"
+                    class="absolute top-full right-0 w-72 bg-white dark:bg-dark-800 border border-primary/10 rounded-2xl shadow-2xl opacity-0 invisible transition-all duration-200 p-3 z-50 mt-2">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-3 pb-1">Servizi</p>
+                    <a href="/servizi/realizzazione-siti-web-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">desktop_windows</span>
+                        <div><p class="text-sm font-bold">Siti Vetrina</p><p class="text-[10px] text-gray-500">Presenza professionale</p></div>
+                    </a>
+                    <a href="/servizi/ecommerce-woocommerce-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        <div><p class="text-sm font-bold">E-Commerce</p><p class="text-[10px] text-gray-500">Vendi online</p></div>
+                    </a>
+                    <a href="/servizi/consulenza-local-seo-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <div><p class="text-sm font-bold">Local SEO</p><p class="text-[10px] text-gray-500">Visibilità locale</p></div>
+                    </a>
+                    <a href="/servizi/rebranding-identita-visiva-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">brush</span>
+                        <div><p class="text-sm font-bold">Rebranding</p><p class="text-[10px] text-gray-500">Evoluzione brand</p></div>
+                    </a>
+                    <a href="/servizi.html" class="flex items-center justify-center gap-2 p-2 text-xs font-bold text-primary hover:bg-primary/5 rounded-xl transition-colors">
+                        Tutti i Servizi <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                    </a>
+                    <div class="border-t border-primary/10 my-2"></div>
+                    <a href="/blog/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">article</span>
+                        <span class="text-sm font-bold">Blog</span>
+                    </a>
+                    <a href="/#faq" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">help</span>
+                        <span class="text-sm font-bold">FAQ</span>
+                    </a>
+                    <div class="mt-2 pt-2 border-t border-primary/10">
+                        <a href="/#contatti" class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all nav-menu-link">
+                            Contattami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO ARTICOLO -->
+    <section style="background: radial-gradient(circle at 60% 50%, #0a1a0f 0%, #020305 70%);" class="pt-16 pb-14 px-6 border-b border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex items-center gap-2 mb-6">
+                <a href="/blog/" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Blog
+                </a>
+                <span class="text-gray-600">/</span>
+                <span class="text-gray-400 text-sm">SEO Tecnica</span>
+            </div>
+            <span class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5">SEO Tecnica</span>
+            <h1 class="text-4xl lg:text-6xl text-white leading-tight mb-6" style="font-family:'Bebas Neue',sans-serif; letter-spacing:0.02em;">
+                Velocità del sito web: come misurarla e migliorarla per il SEO
+            </h1>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
+                Ogni secondo di caricamento in più costa clienti e ranking. Le 6 tecniche concrete, gli strumenti gratuiti e l'impatto reale sulla visibilità nel 2026.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">person</span> Antonio Ilacqua</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span> 27 Giugno 2026</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span> 6 min di lettura</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPO ARTICOLO -->
+    <article class="blog-article" style="background-color: #ffffff;">
+        <div class="max-w-3xl mx-auto px-6 py-16">
+
+            <!-- Indice -->
+            <div style="background:#f0faf4; border:1px solid #c6e8d5; border-radius:12px; padding:1.5rem; margin-bottom:2.5rem;">
+                <p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#0c1d1b; margin-bottom:0.75rem; letter-spacing:0.05em;">INDICE</p>
+                <ol style="list-style:decimal; padding-left:1.2rem; display:flex; flex-direction:column; gap:0.4rem;">
+                    <li><a href="#velocita-ranking" class="toc-link">Perché la velocità è un fattore di ranking e di conversione</a></li>
+                    <li><a href="#misurare-velocita" class="toc-link">Come misurare la velocità: 3 strumenti gratuiti</a></li>
+                    <li><a href="#cause-lentezza" class="toc-link">Le 6 cause più comuni di siti lenti</a></li>
+                    <li><a href="#ottimizzazione-immagini" class="toc-link">Ottimizzazione immagini: il quick win più impattante</a></li>
+                    <li><a href="#mobile-first" class="toc-link">Mobile-first: perché ottimizzare prima per smartphone</a></li>
+                </ol>
+            </div>
+
+            <p>
+                Nel 2026 la velocità di caricamento non è più un dettaglio tecnico: è un fattore di business diretto. Influenza il tuo posizionamento su Google, il tasso di conversione del sito e la percezione che i clienti hanno del tuo brand. Un sito lento invia un messaggio implicito: questa attività non cura i dettagli.
+            </p>
+
+            <h2 id="velocita-ranking">Perché la velocità è un fattore di ranking e di conversione</h2>
+            <p>
+                Google ha incorporato i <strong style="color:#0c1d1b;">Core Web Vitals</strong> nel suo sistema di valutazione Page Experience dal 2021. Questo significa che la velocità percepita dall'utente — misurata da metriche precise come LCP, INP e CLS — incide direttamente sul posizionamento organico.
+            </p>
+            <p>
+                Ma l'impatto va oltre il SEO. Le ricerche sulle performance web mostrano dati molto concreti:
+            </p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li>Amazon ha calcolato che ogni <strong style="color:#0c1d1b;">100ms di latenza aggiuntiva</strong> corrisponde all'<strong style="color:#0c1d1b;">1% di vendite in meno</strong></li>
+                <li>BBC ha rilevato che perdeva il <strong style="color:#0c1d1b;">10% degli utenti</strong> per ogni secondo aggiuntivo di caricamento</li>
+                <li>Il 53% degli utenti mobile abbandona una pagina che impiega più di 3 secondi a caricarsi (Google/SOASTA Research, 2017 — ancora confermato dai dati di campo)</li>
+            </ul>
+            <p>
+                Per un sito locale, il ragionamento è ancora più diretto: un utente mobile che cerca "ristorante Milazzo" trova il tuo sito, lo apre, aspetta 4 secondi — e torna ai risultati di ricerca. Quel cliente è andato dalla concorrenza. La velocità non è una questione tecnica astratta: è clienti persi o acquisiti.
+            </p>
+
+            <h2 id="misurare-velocita">Come misurare la velocità: 3 strumenti gratuiti</h2>
+            <p>
+                Prima di intervenire, devi misurare. Ecco i tre strumenti indispensabili, tutti gratuiti:
+            </p>
+
+            <p><strong style="color:#0c1d1b;">1. PageSpeed Insights</strong> — <a href="https://pagespeed.web.dev" target="_blank" rel="noopener" style="color:#009640;">pagespeed.web.dev</a></p>
+            <p>
+                Inserisci l'URL e ottieni due tipi di dati: dati di laboratorio (simulazione in condizioni controllate) e dati di campo (esperienze reali degli utenti raccolte da Chrome). Il punteggio va da 0 a 100: verde sopra 90, giallo tra 50 e 89, rosso sotto 50. Le voci rosse e arancioni sono le prime da correggere.
+            </p>
+
+            <p><strong style="color:#0c1d1b;">2. Google Search Console → Esperienza → Core Web Vitals</strong></p>
+            <p>
+                Se hai già verificato il sito in GSC, questa sezione ti mostra le performance reali degli utenti del tuo sito, pagina per pagina. A differenza di PageSpeed, qui i dati riflettono connessioni e dispositivi reali — non condizioni di laboratorio simulate.
+            </p>
+
+            <p><strong style="color:#0c1d1b;">3. WebPageTest</strong> — <a href="https://webpagetest.org" target="_blank" rel="noopener" style="color:#009640;">webpagetest.org</a></p>
+            <p>
+                Lo strumento più dettagliato dei tre. Mostra il waterfall completo delle risorse caricate (ogni file CSS, JS, immagine con il suo tempo di caricamento) e permette di simulare connessioni mobile lente. Essenziale per diagnosi approfondite.
+            </p>
+
+            <div class="highlight-box">
+                <p><strong style="color:#009640;">Il dato che conta davvero:</strong> il LCP (Largest Contentful Paint) misurato su utenti reali in Google Search Console è il numero più importante da monitorare. I dati di laboratorio di PageSpeed simulano condizioni ideali; quelli di campo in GSC riflettono la realtà dei tuoi visitatori su connessioni reali e dispositivi reali. Se i due dati divergono molto, il problema è spesso l'hosting o il server.</p>
+            </div>
+
+            <h2 id="cause-lentezza">Le 6 cause più comuni di siti lenti</h2>
+            <p>
+                Nella grande maggioranza dei casi, la lentezza di un sito ha origine da uno di questi sei problemi — spesso in combinazione:
+            </p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li>
+                    <strong style="color:#0c1d1b;">1. Immagini non ottimizzate</strong><br>
+                    Immagini troppo pesanti o in formato obsoleto (JPEG/PNG non compressi) sono la causa numero uno. <em>Soluzione:</em> convertire in formato WebP, dimensionare le immagini alla dimensione effettiva di visualizzazione, applicare l'attributo <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">loading="lazy"</code> per le immagini sotto la piega.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">2. Font bloccanti</strong><br>
+                    I font Google caricati senza ottimizzazione bloccano il rendering della pagina. <em>Soluzione:</em> preload del font principale nell'head con <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">rel="preload"</code> e <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">font-display:swap</code> nel CSS.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">3. JavaScript eccessivo</strong><br>
+                    Plugin WordPress inutilizzati, librerie JS pesanti, script di terze parti caricati in modo sincrono. <em>Soluzione:</em> rimuovere plugin non necessari, differire con <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">defer</code> o <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">async</code> gli script non critici.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">4. Hosting lento</strong><br>
+                    Un hosting condiviso economico con server in USA introduce latenza significativa per utenti italiani. <em>Soluzione:</em> hosting con server in Europa (Germania, Paesi Bassi, Italia) e CDN per la distribuzione degli asset statici.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">5. Nessuna cache browser</strong><br>
+                    Senza cache, ogni visita scarica di nuovo tutti gli asset. <em>Soluzione:</em> configurare correttamente gli header <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">Cache-Control</code> per CSS, JS e immagini — una configurazione già presente nel <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">vercel.json</code> di questo sito.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">6. Server response time alto (TTFB)</strong><br>
+                    Se il server impiega più di 800ms a rispondere prima ancora di inviare il primo byte, ogni altra ottimizzazione è parzialmente vanificata. <em>Soluzione:</em> verificare con PageSpeed Insights → "Riduci i tempi di risposta del server iniziali". TTFB target: sotto 800ms.
+                </li>
+            </ul>
+            <p style="font-size:0.85rem; color:#6b7280;">(Fonte: HTTP Archive Web Almanac 2024 — httparchive.org/reports/)</p>
+
+            <h2 id="ottimizzazione-immagini">Ottimizzazione immagini: il quick win più impattante</h2>
+            <p>
+                Le immagini rappresentano in media il <strong style="color:#0c1d1b;">64% del peso totale di una pagina web</strong> (HTTP Archive 2024). Sono quindi il punto di partenza più logico per qualsiasi intervento di ottimizzazione delle performance.
+            </p>
+            <p><strong style="color:#0c1d1b;">Il confronto tra formati:</strong></p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li><strong style="color:#0c1d1b;">JPEG</strong> — formato tradizionale, supporto universale, ma dimensioni non ottimali</li>
+                <li><strong style="color:#0c1d1b;">WebP</strong> — circa il 30% più leggero di JPEG a parità di qualità visiva. Supportato da tutti i browser moderni. Il formato da adottare oggi.</li>
+                <li><strong style="color:#0c1d1b;">AVIF</strong> — ulteriormente più leggero di WebP, ma supporto browser ancora parziale nel 2026 (non disponibile su Safari iOS precedenti)</li>
+            </ul>
+            <p><strong style="color:#0c1d1b;">Le 4 pratiche fondamentali per le immagini:</strong></p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li>Convertire tutte le immagini in WebP prima del caricamento</li>
+                <li>Ridimensionare l'immagine alla dimensione effettiva in cui verrà mostrata (non caricare un'immagine 2000px se viene mostrata a 400px)</li>
+                <li>Aggiungere <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">loading="lazy"</code> a tutte le immagini sotto il fold della pagina</li>
+                <li>Specificare sempre gli attributi <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">width</code> e <code style="background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:4px; font-size:0.85rem;">height</code> per evitare il layout shift (CLS) durante il caricamento</li>
+            </ul>
+            <p>
+                Per una guida dettagliata a tutti gli aspetti dell'ottimizzazione immagini — compressione, formati, responsive images e attributo srcset — leggi: <a href="/blog/ottimizzazione-immagini-seo.html" style="color:#009640; font-weight:600;">Guida completa all'ottimizzazione immagini →</a>
+            </p>
+
+            <h2 id="mobile-first">Mobile-first: perché ottimizzare prima per smartphone</h2>
+            <p>
+                Dal 2019 Google utilizza il <strong style="color:#0c1d1b;">mobile-first indexing</strong>: scansiona e valuta il tuo sito nella versione mobile, non in quella desktop. Questo significa che le performance su smartphone determinano il tuo posizionamento su Google — anche per gli utenti desktop.
+            </p>
+            <p>
+                Il dato di contesto: il <strong style="color:#0c1d1b;">63% del traffico web italiano proviene da mobile</strong> (Statista Digital Market Outlook Italy 2024). Un sito che funziona perfettamente su desktop ma male su smartphone non viene solo penalizzato dal SEO — esclude la maggioranza dei potenziali visitatori.
+            </p>
+            <p><strong style="color:#0c1d1b;">Le differenze critiche tra mobile e desktop nelle performance:</strong></p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li>CPU degli smartphone più lenta — il JavaScript pesante blocca il rendering molto più a lungo</li>
+                <li>Connessioni 4G/5G con latenza variabile — il TTFB del server è più critico</li>
+                <li>Schermi più piccoli — immagini ottimizzate per mobile non hanno bisogno di essere a piena risoluzione desktop</li>
+            </ul>
+            <p>
+                Per verificare se il tuo sito supera il test mobile di Google: <a href="https://search.google.com/test/mobile-friendly" target="_blank" rel="noopener" style="color:#009640; font-weight:600;">Google Mobile-Friendly Test</a>. Lo strumento indica se ci sono elementi troppo piccoli per il tocco, testo non leggibile o contenuti che escono dalla larghezza dello schermo.
+            </p>
+            <p>
+                La regola pratica: ottimizza sempre la performance mobile come priorità principale. Se il sito è veloce su un iPhone con connessione 4G media, sarà eccellente su desktop.
+            </p>
+
+            <!-- Sources -->
+            <div class="sources-box">
+                <p class="label">FONTI</p>
+                <ul>
+                    <li>WPO Stats — wpostats.com (raccolta di studi sulle performance web)</li>
+                    <li>Google/SOASTA Research, 2017 — "Find Out How You Stack Up to New Industry Benchmarks for Mobile Page Speed"</li>
+                    <li>HTTP Archive Web Almanac 2024 — httparchive.org/reports/</li>
+                    <li>Statista Digital Market Outlook Italy 2024 — statista.com</li>
+                    <li>Google Search Central — developers.google.com/search/docs/appearance/page-experience</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <section style="background: linear-gradient(135deg, #009640 0%, #007a33 100%); padding: 4rem 1.5rem; text-align:center;">
+            <div style="max-width:600px; margin:0 auto;">
+                <h2 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#fff; letter-spacing:0.03em; margin-bottom:1rem;">Il tuo sito è abbastanza veloce?</h2>
+                <p style="color:rgba(255,255,255,0.85); font-family:'Montserrat',sans-serif; margin-bottom:2rem; font-size:1rem; line-height:1.7;">
+                    Misuro le performance del tuo sito con dati reali e ti dico quali interventi portano il miglioramento più rapido.
+                </p>
+                <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                    <a href="/#contatti" style="background:#fff; color:#009640; padding:0.85rem 2rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-weight:700; text-decoration:none; font-size:0.9rem;">
+                        Richiedi Analisi Velocità
+                    </a>
+                    <a href="/blog/core-web-vitals-seo-2026.html" style="border:2px solid rgba(255,255,255,0.5); color:#fff; padding:0.85rem 2rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-weight:700; text-decoration:none; font-size:0.9rem;">
+                        ← Core Web Vitals 2026
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0c1d1b] text-white pt-12 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="size-8 bg-primary flex items-center justify-center rounded text-white">
+                        <span class="material-symbols-outlined text-sm">design_services</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight">Antonio Ilacqua</h2>
+                </div>
+                <p class="text-gray-400 max-w-sm mb-6">Freelancer – Web Designer & SEO Specialist. Trasformo visioni in esperienze digitali di alto livello.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Navigazione</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a class="hover:text-primary transition-colors" href="/servizi.html">Servizi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/blog/">Blog</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#faq">FAQ</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#contatti">Contatti</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Contatti</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                        <span>Via Francesco Crispi 81, 98057 Milazzo (ME)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        <a href="mailto:info@antonioilacqua.it" class="hover:text-primary transition-colors">info@antonioilacqua.it</a>
+                    </li>
+                    <li class="text-xs mt-2 text-gray-500">P.IVA 03740380831</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+            <p>© 2026 Antonio Franco Ilacqua. Tutti i diritti riservati.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="/privacy-policy.html">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navMenuButton = document.getElementById('nav-menu-button');
+        const navDropdown = document.getElementById('nav-dropdown');
+        const navMenuIcon = document.getElementById('nav-menu-icon');
+        if (navMenuButton) {
+            const closeNavMenu = () => {
+                navDropdown.classList.add('opacity-0', 'invisible');
+                navMenuIcon.textContent = 'menu';
+                navMenuButton.setAttribute('aria-expanded', 'false');
+            };
+            navMenuButton.addEventListener('click', () => {
+                const isOpen = !navDropdown.classList.contains('invisible');
+                if (isOpen) { closeNavMenu(); }
+                else {
+                    navDropdown.classList.remove('opacity-0', 'invisible');
+                    navMenuIcon.textContent = 'close';
+                    navMenuButton.setAttribute('aria-expanded', 'true');
+                }
+            });
+            document.addEventListener('click', (e) => {
+                if (!navDropdown.classList.contains('invisible') && !navMenuButton.contains(e.target) && !navDropdown.contains(e.target)) {
+                    closeNavMenu();
+                }
+            });
+        }
+    </script>
+    <script src="/asset/js/cookie-consent.js"></script>
+</body>
+</html>

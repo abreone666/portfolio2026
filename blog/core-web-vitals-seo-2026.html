@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZHP3MV6NG"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-2ZHP3MV6NG');
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Core Web Vitals 2026: cosa sono e perché Google li usa per il ranking – Antonio Ilacqua</title>
+    <meta name="description" content="LCP, INP e CLS spiegati chiaramente. Come misurarli con PageSpeed Insights e Search Console, e le azioni concrete per migliorarli anche senza sviluppatori." />
+    <link rel="canonical" href="https://www.antonioilacqua.it/blog/core-web-vitals-seo-2026.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Core Web Vitals 2026: cosa sono e perché Google li usa per il ranking" />
+    <meta property="og:description" content="LCP, INP e CLS spiegati chiaramente. Come misurarli con PageSpeed Insights e Search Console, e le azioni concrete per migliorarli." />
+    <meta property="og:url" content="https://www.antonioilacqua.it/blog/core-web-vitals-seo-2026.html" />
+    <meta property="og:image" content="https://www.antonioilacqua.it/asset/img/og-core-web-vitals-seo-2026.jpg" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Antonio Ilacqua – Web Designer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Core Web Vitals 2026: cosa sono e perché Google li usa per il ranking" />
+    <meta name="twitter:description" content="LCP, INP e CLS spiegati chiaramente. Come misurarli e le azioni concrete per migliorarli." />
+    <meta name="twitter:image" content="https://www.antonioilacqua.it/asset/img/og-core-web-vitals-seo-2026.jpg" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="geo.region" content="IT-ME" />
+    <meta name="geo.placename" content="Milazzo" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.antonioilacqua.it/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.antonioilacqua.it/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Core Web Vitals 2026", "item": "https://www.antonioilacqua.it/blog/core-web-vitals-seo-2026.html" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Core Web Vitals 2026: cosa sono e perché Google li usa per il ranking",
+          "description": "LCP, INP e CLS spiegati chiaramente. Come misurarli con PageSpeed Insights e Search Console, e le azioni concrete per migliorarli anche senza sviluppatori.",
+          "datePublished": "2026-06-18",
+          "dateModified": "2026-06-18",
+          "image": "https://www.antonioilacqua.it/asset/img/og-core-web-vitals-seo-2026.jpg",
+          "author": { "@type": "Person", "name": "Antonio Ilacqua", "url": "https://www.antonioilacqua.it" },
+          "publisher": { "@type": "Organization", "name": "Antonio Ilacqua – Web Designer", "url": "https://www.antonioilacqua.it" },
+          "mainEntityOfPage": "https://www.antonioilacqua.it/blog/core-web-vitals-seo-2026.html"
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+        .blog-article{font-family:'Montserrat',sans-serif;}
+        .blog-article h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#0c1d1b;margin:2.5rem 0 1rem;letter-spacing:0.02em;}
+        .blog-article p{color:#374151;line-height:1.8;margin-bottom:1.25rem;}
+        .blog-article ul,.blog-article ol{color:#374151;}
+        .blog-article li{line-height:1.8;margin-bottom:0.5rem;}
+        .toc-link{color:#009640;text-decoration:none;font-size:0.9rem;font-weight:500;}.toc-link:hover{text-decoration:underline;}
+        .highlight-box{background:#f0faf4;border-left:4px solid #009640;padding:1.25rem 1.5rem;border-radius:0 10px 10px 0;margin:2rem 0;}
+        .highlight-box p{margin:0;font-size:0.92rem;}
+        .sources-box{background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:1.25rem 1.5rem;margin-top:3rem;}
+        .sources-box p.label{font-family:'Bebas Neue',sans-serif;font-size:0.95rem;color:#6b7280;letter-spacing:0.08em;margin:0 0 0.5rem;}
+        .sources-box ul{padding-left:1.2rem;margin:0;}
+        .sources-box li{font-size:0.82rem;color:#6b7280;margin-bottom:0.3rem;}
+        .metric-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem;border-left:4px solid #009640;}
+        .metric-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#0c1d1b;margin:0 0 0.5rem;letter-spacing:0.03em;}
+        .metric-card .badge{display:inline-block;background:#f0faf4;color:#009640;font-size:0.75rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:20px;margin-bottom:0.5rem;font-family:'Montserrat',sans-serif;}
+        .metric-card p{margin:0;font-size:0.88rem;color:#374151;line-height:1.7;}
+        .tool-card{background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem;}
+        .tool-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:#0c1d1b;margin:0 0 0.4rem;letter-spacing:0.03em;}
+        .tool-card p{margin:0;font-size:0.88rem;color:#374151;}
+    </style>
+</head>
+
+<body class="bg-[#020305] font-sans antialiased">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass-header border-b border-primary/10 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <a href="/index.html" class="flex items-center gap-3 group">
+                <div class="h-10 transition-transform group-hover:scale-105">
+                    <img src="/asset/img/antonioilacqua-design-logo.png" alt="Antonio Ilacqua" class="h-full w-auto">
+                </div>
+            </a>
+            <div class="relative">
+                <button id="nav-menu-button" aria-expanded="false" aria-label="Apri menu"
+                    class="flex items-center gap-2 text-sm font-bold border border-primary/20 px-4 py-2.5 rounded-xl hover:bg-primary/5 transition-colors">
+                    Menu
+                    <span id="nav-menu-icon" class="material-symbols-outlined text-[20px] transition-transform duration-200">menu</span>
+                </button>
+                <div id="nav-dropdown"
+                    class="absolute top-full right-0 w-72 bg-white dark:bg-dark-800 border border-primary/10 rounded-2xl shadow-2xl opacity-0 invisible transition-all duration-200 p-3 z-50 mt-2">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-3 pb-1">Servizi</p>
+                    <a href="/servizi/realizzazione-siti-web-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">desktop_windows</span>
+                        <div><p class="text-sm font-bold">Siti Vetrina</p><p class="text-[10px] text-gray-500">Presenza professionale</p></div>
+                    </a>
+                    <a href="/servizi/ecommerce-woocommerce-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        <div><p class="text-sm font-bold">E-Commerce</p><p class="text-[10px] text-gray-500">Vendi online</p></div>
+                    </a>
+                    <a href="/servizi/consulenza-local-seo-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <div><p class="text-sm font-bold">Local SEO</p><p class="text-[10px] text-gray-500">Visibilità locale</p></div>
+                    </a>
+                    <a href="/servizi/rebranding-identita-visiva-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">brush</span>
+                        <div><p class="text-sm font-bold">Rebranding</p><p class="text-[10px] text-gray-500">Evoluzione brand</p></div>
+                    </a>
+                    <a href="/servizi.html" class="flex items-center justify-center gap-2 p-2 text-xs font-bold text-primary hover:bg-primary/5 rounded-xl transition-colors">
+                        Tutti i Servizi <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                    </a>
+                    <div class="border-t border-primary/10 my-2"></div>
+                    <a href="/blog/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">article</span>
+                        <span class="text-sm font-bold">Blog</span>
+                    </a>
+                    <a href="/#faq" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">help</span>
+                        <span class="text-sm font-bold">FAQ</span>
+                    </a>
+                    <div class="mt-2 pt-2 border-t border-primary/10">
+                        <a href="/#contatti" class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all nav-menu-link">
+                            Contattami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO ARTICOLO -->
+    <section style="background:radial-gradient(circle at 60% 50%,#0a1a0f 0%,#020305 70%);" class="pt-16 pb-14 px-6 border-b border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex items-center gap-2 mb-6">
+                <a href="/blog/" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Blog
+                </a>
+                <span class="text-gray-600">/</span>
+                <span class="text-gray-400 text-sm">SEO Tecnica</span>
+            </div>
+            <span class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5">SEO Tecnica</span>
+            <h1 class="text-4xl lg:text-5xl xl:text-6xl text-white leading-tight mb-6" style="font-family:'Bebas Neue',sans-serif; letter-spacing:0.02em;">
+                Core Web Vitals 2026: cosa sono e perché Google li usa per il ranking
+            </h1>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
+                Dal 2021 Google usa la velocità e l'esperienza di pagina come fattori di ranking. Nel 2026 le soglie sono più stringenti. Ecco cosa devi sapere.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">person</span> Antonio Ilacqua</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span> 18 Giugno 2026</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span> 6 min di lettura</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPO ARTICOLO -->
+    <article class="blog-article" style="background-color:#ffffff;">
+        <div class="max-w-3xl mx-auto px-6 py-16">
+
+            <!-- Indice -->
+            <div style="background:#f0faf4;border:1px solid #c6e8d5;border-radius:12px;padding:1.5rem;margin-bottom:2.5rem;">
+                <p style="font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#0c1d1b;margin-bottom:0.75rem;letter-spacing:0.05em;">INDICE</p>
+                <ol style="list-style:decimal;padding-left:1.2rem;display:flex;flex-direction:column;gap:0.4rem;">
+                    <li><a href="#cosa-sono" class="toc-link">Cosa sono i Core Web Vitals</a></li>
+                    <li><a href="#come-misurare" class="toc-link">Come misurarli gratuitamente</a></li>
+                    <li><a href="#lcp" class="toc-link">LCP: come migliorarlo</a></li>
+                    <li><a href="#inp-cls" class="toc-link">INP e CLS: le metriche più trascurate</a></li>
+                    <li><a href="#priorita" class="toc-link">Priorità: da dove iniziare</a></li>
+                </ol>
+            </div>
+
+            <!-- Firma autore -->
+            <div style="display:flex;align-items:center;gap:1rem;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:1rem 1.25rem;margin-bottom:2rem;">
+                <img src="/asset/img/IMG_4137.webp" alt="Antonio Ilacqua consulente SEO" style="width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;">
+                <div>
+                    <p style="margin:0;font-size:0.85rem;font-weight:700;color:#0c1d1b;">Antonio Ilacqua</p>
+                    <p style="margin:0;font-size:0.8rem;color:#6b7280;">Web Designer & Consulente SEO · Milazzo (ME)</p>
+                </div>
+            </div>
+
+            <p>
+                I Core Web Vitals sono tre metriche che Google usa per valutare la qualità dell'esperienza utente di un sito web. Dal 2021 sono diventati fattori ufficiali di ranking: un sito lento o instabile viene penalizzato nelle SERP rispetto a un sito con prestazioni eccellenti, a parità di contenuto. Nel 2026, con soglie ancora più stringenti rispetto al lancio iniziale, ignorarli significa lasciare posizioni ai competitor che ci hanno lavorato.
+            </p>
+
+            <div class="highlight-box">
+                <p><strong style="color:#009640;">Dato Google I/O 2023:</strong> le pagine che superano le soglie dei Core Web Vitals hanno una probabilità 24% più alta di non essere abbandonate dall'utente prima del caricamento. Meno abbandoni = più tempo sul sito = segnale positivo per il ranking.</p>
+            </div>
+
+            <h2 id="cosa-sono">1. Cosa sono i Core Web Vitals</h2>
+            <p>
+                Tre metriche, tre aspetti distinti dell'esperienza utente. Ognuna ha una soglia precisa che divide "buono" da "da migliorare" da "scarso".
+            </p>
+
+            <div style="margin:1.5rem 0;">
+                <div class="metric-card">
+                    <h3>LCP — Largest Contentful Paint</h3>
+                    <span class="badge">Soglia buona: &lt; 2,5 secondi</span>
+                    <p>Misura il tempo che impiega il contenuto principale della pagina (solitamente l'immagine hero o il titolo principale) a comparire sullo schermo. In parole semplici: quanto ci vuole prima che l'utente veda qualcosa di utile. Oltre i 4 secondi è considerato scarso da Google.</p>
+                </div>
+                <div class="metric-card">
+                    <h3>INP — Interaction to Next Paint</h3>
+                    <span class="badge">Soglia buona: &lt; 200 ms</span>
+                    <p>Ha sostituito FID (First Input Delay) a marzo 2024. Misura la reattività della pagina alle interazioni dell'utente: clic su pulsanti, apertura menu, input nei form. Se il sito "si blocca" un attimo dopo che clicchi su qualcosa, è un INP alto. Oltre 500 ms è considerato scarso.</p>
+                </div>
+                <div class="metric-card">
+                    <h3>CLS — Cumulative Layout Shift</h3>
+                    <span class="badge">Soglia buona: &lt; 0,1</span>
+                    <p>Misura la stabilità visiva della pagina durante il caricamento. Un CLS alto significa che elementi della pagina si spostano mentre stai leggendo o stai per cliccare — un'esperienza frustrante. Il valore è adimensionale: 0 è perfetto, sopra 0,25 è considerato scarso da Google.</p>
+                </div>
+            </div>
+
+            <h2 id="come-misurare">2. Come misurarli gratuitamente</h2>
+            <p>
+                Esistono due tipi di dati per i Core Web Vitals: i dati <strong style="color:#0c1d1b;">Lab</strong> (simulati da un tool in condizioni controllate) e i dati <strong style="color:#0c1d1b;">Field</strong> (raccolti da utenti reali che visitano il sito). Per il ranking Google usa esclusivamente i dati Field — i dati Lab sono utili per capire dove intervenire, ma non riflettono l'esperienza reale.
+            </p>
+
+            <div style="margin:1.5rem 0;">
+                <div class="tool-card">
+                    <h3>PageSpeed Insights — pagespeed.web.dev</h3>
+                    <p>Il punto di partenza più semplice. Inserisci l'URL e ottieni sia i dati Lab (Lighthouse) che i dati Field (Chrome UX Report) per quella pagina. Mostra un punteggio 0–100 e segnala esattamente quali elementi rallentano il sito. Completamente gratuito, nessun account necessario.</p>
+                </div>
+                <div class="tool-card">
+                    <h3>Google Search Console — sezione Esperienza → Core Web Vitals</h3>
+                    <p>Mostra i dati Field aggregati per tutte le pagine del tuo sito, suddivise in "Buone", "Da migliorare" e "Scarse". È l'unico strumento che ti mostra quante pagine hanno un problema e quali sono le più urgenti da correggere. Dati reali, non simulazioni.</p>
+                </div>
+                <div class="tool-card">
+                    <h3>Chrome DevTools — tab Lighthouse</h3>
+                    <p>Integrato nel browser Chrome (F12 → Lighthouse). Utile per testare pagine non pubbliche (staging, localhost) o per analisi dettagliate elemento per elemento. Fornisce dati Lab con suggerimenti specifici su cosa ottimizzare e quanto potrebbe migliorare la metrica.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong style="color:#009640;">Regola fondamentale:</strong> i dati Lab (Lighthouse, PageSpeed) servono per diagnosticare. I dati Field (GSC, Chrome UX Report) sono quelli che Google usa per il ranking. Puoi avere un punteggio Lighthouse alto e comunque avere problemi CWV nei dati Field, se gli utenti reali hanno connessioni lente o dispositivi vecchi.</p>
+            </div>
+
+            <h2 id="lcp">3. LCP: come migliorarlo</h2>
+            <p>
+                L'LCP è la metrica con l'impatto maggiore sul ranking e spesso quella più facile da migliorare con interventi mirati. Le cause più comuni di un LCP lento sono tre:
+            </p>
+            <ul style="padding-left:1.5rem;margin-bottom:1.5rem;">
+                <li><strong style="color:#0c1d1b;">Immagine hero non ottimizzata.</strong> Un'immagine da 2–3 MB che viene ridimensionata via CSS è la causa più comune di LCP alto. Soluzione: convertire in formato WebP (fino al 30% più leggero di JPEG a parità di qualità), ridimensionare al display size reale e aggiungere l'attributo <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">loading="eager"</code> all'immagine hero (non lazy loading per il contenuto above the fold).</li>
+                <li><strong style="color:#0c1d1b;">Font bloccanti.</strong> I font Google caricati senza <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">display=swap</code> bloccano il rendering del testo fino al caricamento completo. Aggiungere <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">&display=swap</code> all'URL del font e usare <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">rel="preload"</code> riduce sensibilmente l'LCP.</li>
+                <li><strong style="color:#0c1d1b;">Server lento (TTFB alto).</strong> Se il server impiega più di 600ms per rispondere (TTFB — Time to First Byte), l'LCP ne risente direttamente. Soluzione: CDN (Content Delivery Network) per servire i file statici dal nodo geograficamente più vicino all'utente, e hosting con PHP/server-side caching abilitato.</li>
+            </ul>
+            <p>
+                Per approfondire ogni ottimizzazione con esempi di codice specifici, la guida ufficiale di Google è disponibile su <a href="https://web.dev/lcp/" target="_blank" rel="noopener" style="color:#009640;text-decoration:underline;">web.dev/lcp</a>.
+            </p>
+
+            <h2 id="inp-cls">4. INP e CLS: le metriche più trascurate</h2>
+            <p>
+                INP e CLS vengono spesso ignorati perché meno "visibili" di un caricamento lento. Eppure sono quelli che creano le esperienze più frustranti per l'utente.
+            </p>
+            <p>
+                <strong style="color:#0c1d1b;">Come migliorare l'INP:</strong> la causa principale è il JavaScript pesante eseguito nel thread principale del browser. Ogni volta che l'utente interagisce con un elemento, il browser deve aspettare che il JS in esecuzione finisca prima di rispondere. Soluzioni pratiche: ridurre i plugin inutili (in WordPress, ogni plugin attivo aggiunge JS alla pagina), differire il caricamento degli script non critici con <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">defer</code> o <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">async</code>, e usare event delegation invece di listener multipli sullo stesso tipo di evento.
+            </p>
+            <p>
+                <strong style="color:#0c1d1b;">Come migliorare il CLS:</strong> il layout shift avviene quando il browser carica un elemento (immagine, font, banner pubblicitario) senza conoscerne le dimensioni in anticipo e deve riorganizzare il layout. Soluzioni: specificare sempre gli attributi <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">width</code> e <code style="background:#f3f4f6;padding:0.1rem 0.3rem;border-radius:4px;font-size:0.85rem;">height</code> per ogni immagine e iframe, riservare spazio fisso per banner e widget caricati dinamicamente, e non inserire contenuto dinamico sopra il testo esistente dopo il caricamento iniziale.
+            </p>
+
+            <div class="highlight-box">
+                <p>Per una guida completa su come la velocità del sito influisce sul ranking SEO — con casi concreti e ottimizzazioni step-by-step — leggi: <a href="/blog/velocita-sito-web-seo.html" style="color:#009640;text-decoration:underline;">Velocità sito web e SEO: la guida pratica</a>.</p>
+            </div>
+
+            <h2 id="priorita">5. Priorità: da dove iniziare</h2>
+            <p>
+                Se stai partendo da zero con i Core Web Vitals, questa è la sequenza di azioni che raccomando — ordinata per impatto sul ranking e facilità di esecuzione:
+            </p>
+            <ol style="padding-left:1.5rem;margin-bottom:1.5rem;">
+                <li><strong style="color:#0c1d1b;">Prima: misura (PageSpeed Insights + GSC).</strong> Non intervenire al buio. Identifica quali pagine hanno problemi Field e quali metriche sono critiche. 15 minuti di analisi salvano ore di ottimizzazioni inutili.</li>
+                <li><strong style="color:#0c1d1b;">Secondo: ottimizza l'LCP.</strong> Ha il peso maggiore sul ranking tra i tre. Le ottimizzazioni delle immagini hero e del TTFB danno il ritorno più rapido sull'investimento di tempo.</li>
+                <li><strong style="color:#0c1d1b;">Terzo: correggi il CLS.</strong> Più facile da risolvere dell'INP, spesso basta aggiungere dimensioni alle immagini. L'impatto visivo è immediato e apprezzato dagli utenti su mobile.</li>
+                <li><strong style="color:#0c1d1b;">Quarto: lavora sull'INP.</strong> Richiede analisi più tecnica del JavaScript. Inizia rimuovendo plugin inutili in WordPress — è il miglioramento più semplice con impatto maggiore sulla maggior parte dei siti.</li>
+            </ol>
+            <p>
+                Secondo HTTP Archive (Web Almanac 2024), solo il 51% delle pagine analizzate supera le soglie "buono" per tutti e tre i Core Web Vitals. Il CLS è la metrica con il più alto tasso di superamento, l'INP quella con il più basso. Questo significa che lavorare su INP ti differenzia dalla maggioranza dei siti competitor che non ci hanno ancora messo mano.
+            </p>
+
+            <div class="sources-box">
+                <p class="label">FONTI</p>
+                <ul>
+                    <li>Google Search Central, Web Vitals – web.dev/vitals</li>
+                    <li>Google I/O 2023, Core Web Vitals session – io.google/2023</li>
+                    <li>HTTP Archive, Web Almanac 2024 – almanac.httparchive.org</li>
+                    <li>Chrome UX Report – developer.chrome.com/docs/crux</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <section id="cta" style="background:linear-gradient(135deg,#009640 0%,#007a33 100%);padding:4rem 1.5rem;text-align:center;">
+            <div style="max-width:600px;margin:0 auto;">
+                <h2 style="font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:#fff;letter-spacing:0.03em;margin-bottom:1rem;">Il tuo sito supera i Core Web Vitals?</h2>
+                <p style="color:rgba(255,255,255,0.85);font-family:'Montserrat',sans-serif;margin-bottom:2rem;font-size:1rem;line-height:1.7;">
+                    Analizzo gratuitamente le performance del tuo sito e ti dico cosa rallenta il ranking.
+                </p>
+                <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="/#contatti" style="background:#fff;color:#009640;padding:0.85rem 2rem;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:700;text-decoration:none;font-size:0.9rem;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+                        Richiedi Analisi Gratuita
+                    </a>
+                    <a href="/blog/velocita-sito-web-seo.html" style="border:2px solid rgba(255,255,255,0.5);color:#fff;padding:0.85rem 2rem;border-radius:10px;font-family:'Montserrat',sans-serif;font-weight:700;text-decoration:none;font-size:0.9rem;">
+                        Approfondisci: Velocità Sito →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0c1d1b] text-white pt-12 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="size-8 bg-primary flex items-center justify-center rounded text-white">
+                        <span class="material-symbols-outlined text-sm">design_services</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight">Antonio Ilacqua</h2>
+                </div>
+                <p class="text-gray-400 max-w-sm mb-6">Freelancer – Web Designer & SEO Specialist. Trasformo visioni in esperienze digitali di alto livello.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Navigazione</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a class="hover:text-primary transition-colors" href="/servizi.html">Servizi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/blog/">Blog</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#faq">FAQ</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#contatti">Contatti</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Contatti</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                        <span>Via Francesco Crispi 81, 98057 Milazzo (ME)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        <a href="mailto:info@antonioilacqua.it" class="hover:text-primary transition-colors">info@antonioilacqua.it</a>
+                    </li>
+                    <li class="text-xs mt-2 text-gray-500">P.IVA 03740380831</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+            <p>© 2026 Antonio Franco Ilacqua. Tutti i diritti riservati.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="/privacy-policy.html">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>const navMenuButton=document.getElementById('nav-menu-button'),navDropdown=document.getElementById('nav-dropdown'),navMenuIcon=document.getElementById('nav-menu-icon');if(navMenuButton){const c=()=>{navDropdown.classList.add('opacity-0','invisible');navMenuIcon.textContent='menu';navMenuButton.setAttribute('aria-expanded','false');};navMenuButton.addEventListener('click',()=>{const o=!navDropdown.classList.contains('invisible');if(o){c();}else{navDropdown.classList.remove('opacity-0','invisible');navMenuIcon.textContent='close';navMenuButton.setAttribute('aria-expanded','true');}});document.addEventListener('click',e=>{if(!navDropdown.classList.contains('invisible')&&!navMenuButton.contains(e.target)&&!navDropdown.contains(e.target)){c();}});}</script>
+    <script src="/asset/js/cookie-consent.js"></script>
+</body>
+</html>

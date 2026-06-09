@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="it" class="dark">
+
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZHP3MV6NG"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-2ZHP3MV6NG');
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Schema markup LocalBusiness: la guida pratica per implementarlo – Antonio Ilacqua</title>
+    <meta name="description" content="Cos'è il JSON-LD LocalBusiness, perché Google lo premia con rich snippet e il codice pronto da copiare e adattare per la tua attività locale nel 2026." />
+    <link rel="canonical" href="https://www.antonioilacqua.it/blog/schema-markup-local-business.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Schema markup LocalBusiness: la guida pratica per implementarlo" />
+    <meta property="og:description" content="Cos'è il JSON-LD LocalBusiness, perché Google lo premia con rich snippet e il codice pronto da copiare e adattare per la tua attività locale nel 2026." />
+    <meta property="og:url" content="https://www.antonioilacqua.it/blog/schema-markup-local-business.html" />
+    <meta property="og:image" content="https://www.antonioilacqua.it/asset/img/og-blog.jpg" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Antonio Ilacqua – Web Designer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="geo.region" content="IT-ME" />
+    <meta name="geo.placename" content="Milazzo" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[
+      {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.antonioilacqua.it/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.antonioilacqua.it/blog/"},{"@type":"ListItem","position":3,"name":"Schema markup LocalBusiness: la guida pratica per implementarlo","item":"https://www.antonioilacqua.it/blog/schema-markup-local-business.html"}]},
+      {"@type":"BlogPosting","headline":"Schema markup LocalBusiness: la guida pratica per implementarlo","description":"Cos'è il JSON-LD LocalBusiness, perché Google lo premia con rich snippet e il codice pronto da copiare e adattare per la tua attività locale nel 2026.","datePublished":"2026-07-02","dateModified":"2026-07-02","image":"https://www.antonioilacqua.it/asset/img/og-blog.jpg","author":{"@type":"Person","name":"Antonio Ilacqua","url":"https://www.antonioilacqua.it"},"publisher":{"@type":"Organization","name":"Antonio Ilacqua – Web Designer","url":"https://www.antonioilacqua.it"},"mainEntityOfPage":"https://www.antonioilacqua.it/blog/schema-markup-local-business.html"}
+    ]}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+        .blog-article { font-family: 'Montserrat', sans-serif; }
+        .blog-article h2 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #0c1d1b; margin: 2.5rem 0 1rem; letter-spacing: 0.02em; }
+        .blog-article p { color: #374151; line-height: 1.8; margin-bottom: 1.25rem; }
+        .blog-article ul, .blog-article ol { color: #374151; }
+        .blog-article li { line-height: 1.8; margin-bottom: 0.5rem; }
+        .toc-link { color: #009640; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .toc-link:hover { text-decoration: underline; }
+        .highlight-box { background: #f0faf4; border-left: 4px solid #009640; padding: 1.25rem 1.5rem; border-radius: 0 10px 10px 0; margin: 2rem 0; }
+        .highlight-box p { margin: 0; font-size: 0.92rem; }
+        .sources-box { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 3rem; }
+        .sources-box p.label { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; color: #6b7280; letter-spacing: 0.08em; margin: 0 0 0.5rem; }
+        .sources-box ul { padding-left: 1.2rem; margin: 0; }
+        .sources-box li { font-size: 0.82rem; color: #6b7280; margin-bottom: 0.3rem; }
+        pre { background: #1a1a2e; color: #e2e8f0; padding: 1.25rem; border-radius: 10px; overflow-x: auto; font-size: 0.85rem; line-height: 1.6; margin: 1.5rem 0; }
+    </style>
+</head>
+
+<body class="bg-[#020305] font-sans antialiased">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass-header border-b border-primary/10 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <a href="/index.html" class="flex items-center gap-3 group">
+                <div class="h-10 transition-transform group-hover:scale-105">
+                    <img src="/asset/img/antonioilacqua-design-logo.png" alt="Antonio Ilacqua" class="h-full w-auto">
+                </div>
+            </a>
+            <div class="relative">
+                <button id="nav-menu-button" aria-expanded="false" aria-label="Apri menu"
+                    class="flex items-center gap-2 text-sm font-bold border border-primary/20 px-4 py-2.5 rounded-xl hover:bg-primary/5 transition-colors">
+                    Menu
+                    <span id="nav-menu-icon" class="material-symbols-outlined text-[20px] transition-transform duration-200">menu</span>
+                </button>
+                <div id="nav-dropdown"
+                    class="absolute top-full right-0 w-72 bg-white dark:bg-dark-800 border border-primary/10 rounded-2xl shadow-2xl opacity-0 invisible transition-all duration-200 p-3 z-50 mt-2">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-3 pb-1">Servizi</p>
+                    <a href="/servizi/realizzazione-siti-web-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">desktop_windows</span>
+                        <div><p class="text-sm font-bold">Siti Vetrina</p><p class="text-[10px] text-gray-500">Presenza professionale</p></div>
+                    </a>
+                    <a href="/servizi/ecommerce-woocommerce-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        <div><p class="text-sm font-bold">E-Commerce</p><p class="text-[10px] text-gray-500">Vendi online</p></div>
+                    </a>
+                    <a href="/servizi/consulenza-local-seo-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <div><p class="text-sm font-bold">Local SEO</p><p class="text-[10px] text-gray-500">Visibilità locale</p></div>
+                    </a>
+                    <a href="/servizi/rebranding-identita-visiva-milazzo/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors">
+                        <span class="material-symbols-outlined text-primary">brush</span>
+                        <div><p class="text-sm font-bold">Rebranding</p><p class="text-[10px] text-gray-500">Evoluzione brand</p></div>
+                    </a>
+                    <div class="border-t border-primary/10 my-2"></div>
+                    <a href="/blog/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-primary/10 transition-colors nav-menu-link">
+                        <span class="material-symbols-outlined text-primary">article</span>
+                        <span class="text-sm font-bold">Blog</span>
+                    </a>
+                    <div class="mt-2 pt-2 border-t border-primary/10">
+                        <a href="/#contatti" class="flex items-center justify-center w-full bg-primary text-white py-3 rounded-xl text-sm font-bold hover:bg-primary/90 transition-all nav-menu-link">
+                            Contattami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section style="background: radial-gradient(circle at 60% 50%, #0a1a0f 0%, #020305 70%);" class="pt-16 pb-14 px-6 border-b border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex items-center gap-2 mb-6">
+                <a href="/blog/" class="text-gray-400 hover:text-primary transition-colors text-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[16px]">arrow_back</span> Blog
+                </a>
+                <span class="text-gray-600">/</span>
+                <span class="text-gray-400 text-sm">SEO Tecnica</span>
+            </div>
+            <span class="inline-block bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5">SEO Tecnica</span>
+            <h1 class="text-4xl lg:text-6xl text-white leading-tight mb-6" style="font-family:'Bebas Neue',sans-serif; letter-spacing:0.02em;">
+                Schema markup LocalBusiness
+            </h1>
+            <p class="text-lg text-gray-300 leading-relaxed mb-8 max-w-2xl">
+                Cos'è il JSON-LD LocalBusiness, perché Google lo premia con rich snippet e il codice pronto da copiare e adattare per la tua attività locale nel 2026.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">person</span> Antonio Ilacqua</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span> 2 Luglio 2026</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px] text-primary">schedule</span> 5 min di lettura</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICOLO -->
+    <article class="blog-article" style="background-color: #ffffff;">
+        <div class="max-w-3xl mx-auto px-6 py-16">
+
+            <!-- Indice -->
+            <div style="background:#f0faf4; border:1px solid #c6e8d5; border-radius:12px; padding:1.5rem; margin-bottom:2.5rem;">
+                <p style="font-family:'Bebas Neue',sans-serif; font-size:1.1rem; color:#0c1d1b; margin-bottom:0.75rem; letter-spacing:0.05em;">INDICE</p>
+                <ol style="list-style:decimal; padding-left:1.2rem; display:flex; flex-direction:column; gap:0.4rem;">
+                    <li><a href="#cos-e-schema" class="toc-link">Cos'è lo schema markup e perché Google lo ama</a></li>
+                    <li><a href="#tipi-schema" class="toc-link">I tipi di schema più utili per PMI locali</a></li>
+                    <li><a href="#codice-json-ld" class="toc-link">Il codice JSON-LD LocalBusiness da copiare</a></li>
+                    <li><a href="#verifica" class="toc-link">Come verificare che il markup funzioni</a></li>
+                    <li><a href="#errori-comuni" class="toc-link">Errori comuni nell'implementazione</a></li>
+                </ol>
+            </div>
+
+            <p>
+                Milioni di siti web descrivono la propria attività a parole. Ma Google non è un lettore umano: per capire il <em>significato</em> di quello che trova, ha bisogno di un linguaggio più preciso. Lo schema markup è quel linguaggio — un vocabolario condiviso che trasforma il tuo sito da una pagina di testo in una scheda di dati strutturati che Google può leggere, interpretare e mostrare direttamente nei risultati di ricerca.
+            </p>
+
+            <!-- Sezione 1 -->
+            <h2 id="cos-e-schema">1. Cos'è lo schema markup e perché Google lo ama</h2>
+            <p>
+                Lo schema markup è un vocabolario di dati strutturati definito da <strong style="color:#0c1d1b;">schema.org</strong> — un'iniziativa congiunta di Google, Microsoft, Yahoo e Yandex nata nel 2011. Il suo scopo è fornire un sistema standardizzato per "etichettare" il contenuto di una pagina web in modo che i motori di ricerca ne comprendano il significato preciso, non solo le parole.
+            </p>
+            <p>
+                La differenza è concreta: senza schema markup, Google vede la stringa "Lunedì 09:00–18:00" e deve <em>dedurre</em> che si tratta di un orario di apertura, analizzando il contesto. Con lo schema <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">openingHoursSpecification</code>, Google sa con assoluta certezza che è un orario e può mostrarlo direttamente nel Knowledge Panel, nei rich snippet o nella scheda dell'attività.
+            </p>
+            <p>
+                L'impatto sui click è misurabile: secondo Search Engine Journal (2023), le pagine arricchite da rich snippet generati tramite schema markup registrano un CTR fino al <strong style="color:#0c1d1b;">30% superiore</strong> rispetto alle pagine senza markup, a parità di posizione in SERP. In un panorama dove la posizione media conta, un aumento del 30% nel tasso di click può fare la differenza tra un sito marginale e uno che genera lead costantemente.
+            </p>
+
+            <!-- Sezione 2 -->
+            <h2 id="tipi-schema">2. I tipi di schema più utili per PMI locali</h2>
+            <p>
+                Schema.org conta oltre 800 tipi di entità. Per una PMI locale, quattro coprono il 90% delle esigenze:
+            </p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li>
+                    <strong style="color:#0c1d1b;">LocalBusiness</strong> (o sottotipo specifico) — descrive l'attività: nome, indirizzo, orari, telefono, coordinate geografiche, fascia di prezzo. È il più importante per la SEO locale. Usa il sottotipo più preciso: <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">Restaurant</code>, <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">MedicalBusiness</code>, <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">Plumber</code>, <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">Dentist</code>, ecc.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">BreadcrumbList</strong> — definisce la struttura di navigazione del sito, visibile nei risultati di ricerca come percorso cliccabile (Home › Blog › Titolo Articolo). Migliora la comprensione della gerarchia del sito e l'esperienza utente in SERP.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">FAQPage</strong> — contrassegna le domande e risposte di una pagina FAQ. Quando correttamente implementato, Google può mostrare le singole domande espandibili direttamente nella pagina dei risultati, occupando più spazio visivo e riducendo i click dei competitor.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">BlogPosting / Article</strong> — descrive gli articoli del blog con autore, data di pubblicazione, immagine e descrizione. Abilita i rich snippet per gli articoli nelle ricerche news e topic generali.
+                </li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong style="color:#009640;">Consiglio pratico:</strong> Per trovare il tipo di schema più preciso per la tua attività, cerca direttamente su schema.org il tuo settore. "Dentist", "Plumber", "Restaurant", "AutoRepair" sono tipi specifici con proprietà dedicate che Google privilegia rispetto al generico "LocalBusiness" — perché forniscono più informazioni contestuali sull'attività.</p>
+            </div>
+
+            <!-- Sezione 3 -->
+            <h2 id="codice-json-ld">3. Il codice JSON-LD LocalBusiness da copiare</h2>
+            <p>
+                Il formato raccomandato da Google (dal 2016 in poi) è <strong style="color:#0c1d1b;">JSON-LD</strong> (JavaScript Object Notation for Linked Data). Va inserito nel <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">&lt;head&gt;</code> della pagina all'interno di un tag <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">&lt;script type="application/ld+json"&gt;</code>. È preferito rispetto a Microdata e RDFa perché non mescola il markup dati con il codice HTML della pagina, rendendolo più facile da mantenere.
+            </p>
+            <p>Di seguito un template completo che puoi copiare e adattare con i dati reali della tua attività:</p>
+
+<pre>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nome della tua attività",
+  "image": "https://tuosito.it/logo.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Esempio 1",
+    "addressLocality": "Milazzo",
+    "addressRegion": "ME",
+    "postalCode": "98057",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 38.2269,
+    "longitude": 15.2412
+  },
+  "telephone": "+39 090 XXXXXXX",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ],
+  "url": "https://tuosito.it",
+  "priceRange": "€€",
+  "servesCuisine": "Italiana"
+}
+&lt;/script&gt;</pre>
+
+            <p>
+                Sostituisci ogni valore con i dati reali della tua attività. Il campo <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">servesCuisine</code> è specifico per i ristoranti — rimuovilo se non pertinente. Per le attività con giornate di chiusura diverse, aggiungi ulteriori oggetti <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">openingHoursSpecification</code> per il sabato e la domenica.
+            </p>
+            <p>
+                Le coordinate geografiche (<code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">latitude</code> e <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">longitude</code>) si trovano facilmente aprendo Google Maps, cercando la tua sede e leggendo l'URL — contiene le coordinate in forma decimale.
+            </p>
+
+            <!-- Sezione 4 -->
+            <h2 id="verifica">4. Come verificare che il markup funzioni</h2>
+            <p>
+                Dopo l'implementazione, è fondamentale verificare che il JSON-LD sia sintatticamente corretto e che Google lo riconosca come valido. Due strumenti ufficiali:
+            </p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li>
+                    <strong style="color:#0c1d1b;">Rich Results Test</strong> (search.google.com/test/rich-results) — incolla l'URL della tua pagina oppure il codice JSON-LD direttamente. Lo strumento mostra se il markup è valido, quali rich result può generare e gli eventuali campi mancanti o errati. È lo strumento ufficiale di Google e la fonte di verità per la compatibilità.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">Google Search Console → Miglioramenti</strong> — nella sezione "Miglioramenti" di GSC, Google mostra tutti i rich result attivi rilevati sul sito con il numero di pagine valide, con avvisi e con errori. Se il tuo schema ha proprietà mancanti che impediscono la visualizzazione del rich result, l'errore compare qui con la pagina specifica.
+                </li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong style="color:#009640;">Tempistiche:</strong> Dopo l'implementazione, invia la pagina per reindicizzazione manuale da Google Search Console (URL Inspection → Richiedi indicizzazione). I rich result non appaiono immediatamente nei risultati: Google può impiegare 1–3 settimane prima di mostrare gli snippet arricchiti, anche dopo la validazione. Torna a controllare GSC dopo 2 settimane. Vedi anche: <a href="/blog/seo-tecnica-guida-completa.html" style="color:#009640; font-weight:600;">SEO Tecnica: guida completa &#8592;</a></p>
+            </div>
+
+            <!-- Sezione 5 -->
+            <h2 id="errori-comuni">5. Errori comuni nell'implementazione</h2>
+            <p>
+                Lo schema markup mal implementato non solo è inutile — in alcuni casi può essere penalizzante se Google lo ritiene fuorviante. Ecco gli errori più frequenti:
+            </p>
+            <ul style="padding-left:1.5rem; margin-bottom:1.5rem;">
+                <li>
+                    <strong style="color:#0c1d1b;">Usare Microdata invece di JSON-LD</strong> — Microdata richiede di annotare inline il codice HTML, rendendolo fragile ad ogni modifica del layout. Google ha chiaramente indicato JSON-LD come formato preferito nel 2026. I siti che usano ancora Microdata non vengono penalizzati, ma la manutenzione è notevolmente più complessa.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">Omettere le proprietà obbligatorie</strong> — Per LocalBusiness, <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">name</code> e <code style="background:#f3f4f6; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.85rem;">address</code> sono i campi minimi richiesti. Senza di essi, Google non genererà nessun rich result e il Rich Results Test segnalerà un errore bloccante.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">Copiare il template senza sostituire i dati</strong> — Uno degli errori più comuni in assoluto: il markup viene inserito con i valori placeholder ("Nome della tua attività", "Via Esempio 1"). Google lo legge comunque, ma mostra informazioni false — peggio di non averlo.
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">Implementare schema su pagine che non mostrano quelle informazioni</strong> — Secondo le linee guida di Google, il markup deve descrivere il contenuto visibile della pagina. Se inserisci orari di apertura nel JSON-LD ma non compaiono nel testo della pagina, Google può interpretarlo come markup ingannevole e ignorarlo (o penalizzarlo).
+                </li>
+                <li>
+                    <strong style="color:#0c1d1b;">Non aggiornare il markup al variare dei dati</strong> — Cambio di orari, nuovo indirizzo, nuovo numero di telefono: il JSON-LD deve essere aggiornato contestualmente. Se il Rich Results Test mostra informazioni diverse da quelle nel corpo pagina, Google valida il markup come potenzialmente fuorviante.
+                </li>
+            </ul>
+
+            <!-- Sources -->
+            <div class="sources-box">
+                <p class="label">FONTI E RIFERIMENTI</p>
+                <ul>
+                    <li>schema.org — Documentazione ufficiale del vocabolario di dati strutturati (schema.org)</li>
+                    <li>Google Search Central — Structured Data Documentation (developers.google.com/search/docs/appearance/structured-data)</li>
+                    <li>Google Search Central — Rich Results Test documentation (search.google.com/test/rich-results)</li>
+                    <li>Search Engine Journal — "Rich Snippets CTR Study" 2023 (searchenginejournal.com)</li>
+                    <li>Google — "Understand how structured data works" (developers.google.com/search/docs/appearance/structured-data/intro-structured-data)</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- CTA -->
+        <section style="background: linear-gradient(135deg, #009640 0%, #007a33 100%); padding: 4rem 1.5rem; text-align:center;">
+            <div style="max-width:600px; margin:0 auto;">
+                <h2 style="font-family:'Bebas Neue',sans-serif; font-size:2.5rem; color:#fff; letter-spacing:0.03em; margin-bottom:1rem;">Il tuo sito ha i dati strutturati?</h2>
+                <p style="color:rgba(255,255,255,0.85); font-family:'Montserrat',sans-serif; margin-bottom:2rem; font-size:1rem; line-height:1.7;">
+                    Implemento schema markup LocalBusiness completo per la tua attività: ogni dettaglio che Google può mostrare direttamente in SERP — orari, indirizzo, telefono, rating, FAQ.
+                </p>
+                <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                    <a href="/#contatti" style="background:#fff; color:#009640; padding:0.85rem 2rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-weight:700; text-decoration:none; font-size:0.9rem;">
+                        Richiedi Implementazione Schema
+                    </a>
+                    <a href="/blog/seo-tecnica-guida-completa.html" style="border:2px solid rgba(255,255,255,0.5); color:#fff; padding:0.85rem 2rem; border-radius:10px; font-family:'Montserrat',sans-serif; font-weight:700; text-decoration:none; font-size:0.9rem;">
+                        ← SEO Tecnica Completa
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0c1d1b] text-white pt-12 pb-10 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="size-8 bg-primary flex items-center justify-center rounded text-white">
+                        <span class="material-symbols-outlined text-sm">design_services</span>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight">Antonio Ilacqua</h2>
+                </div>
+                <p class="text-gray-400 max-w-sm mb-6">Freelancer – Web Designer &amp; SEO Specialist. Trasformo visioni in esperienze digitali di alto livello.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Navigazione</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a class="hover:text-primary transition-colors" href="/servizi.html">Servizi</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/blog/">Blog</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#faq">FAQ</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="/#contatti">Contatti</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6 text-lg">Contatti</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                        <span>Via Francesco Crispi 81, 98057 Milazzo (ME)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                        <a href="mailto:info@antonioilacqua.it" class="hover:text-primary transition-colors">info@antonioilacqua.it</a>
+                    </li>
+                    <li class="text-xs mt-2 text-gray-500">P.IVA 03740380831</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 gap-4">
+            <p>© 2026 Antonio Franco Ilacqua. Tutti i diritti riservati.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="/privacy-policy.html">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navMenuButton = document.getElementById('nav-menu-button');
+        const navDropdown = document.getElementById('nav-dropdown');
+        const navMenuIcon = document.getElementById('nav-menu-icon');
+        if (navMenuButton) {
+            const closeNavMenu = () => {
+                navDropdown.classList.add('opacity-0', 'invisible');
+                navMenuIcon.textContent = 'menu';
+                navMenuButton.setAttribute('aria-expanded', 'false');
+            };
+            navMenuButton.addEventListener('click', () => {
+                const isOpen = !navDropdown.classList.contains('invisible');
+                if (isOpen) { closeNavMenu(); }
+                else {
+                    navDropdown.classList.remove('opacity-0', 'invisible');
+                    navMenuIcon.textContent = 'close';
+                    navMenuButton.setAttribute('aria-expanded', 'true');
+                }
+            });
+            document.addEventListener('click', (e) => {
+                if (!navDropdown.classList.contains('invisible') && !navMenuButton.contains(e.target) && !navDropdown.contains(e.target)) {
+                    closeNavMenu();
+                }
+            });
+        }
+    </script>
+    <script src="/asset/js/cookie-consent.js"></script>
+</body>
+</html>

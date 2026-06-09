@@ -1,5 +1,7 @@
 {
+  "outputDirectory": ".",
   "redirects": [
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "antonioilacqua.it" }], "destination": "https://www.antonioilacqua.it/$1", "permanent": true },
     { "source": "/servizi/siti-vetrina.html", "destination": "/servizi/realizzazione-siti-web-milazzo/", "permanent": true },
     { "source": "/servizi/e-commerce.html", "destination": "/servizi/ecommerce-woocommerce-milazzo/", "permanent": true },
     { "source": "/servizi/local-seo.html", "destination": "/servizi/consulenza-local-seo-milazzo/", "permanent": true },
@@ -37,6 +39,13 @@
       "source": "/asset/js/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=2592000" }
+      ]
+    },
+    {
+      "source": "/asset/3d/(.*)\\.glb",
+      "headers": [
+        { "key": "Content-Type", "value": "model/gltf-binary" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     }
   ]
