@@ -46,7 +46,7 @@
 
   <url>
     <loc>https://www.antonioilacqua.it/blog/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -72,5 +72,88 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/consulente-seo-milazzo.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/google-business-profile-guida-2026.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/recensioni-google-attivita-locali.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/consulente-seo-messina.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/core-web-vitals-seo-2026.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/keyword-research-locale.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/realizzazione-siti-web-messina.html</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/seo-tecnica-guida-completa.html</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/velocita-sito-web-seo.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/link-building-locale-pmi.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/schema-markup-local-business.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.antonioilacqua.it/blog/ottimizzazione-immagini-seo.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
 </urlset>

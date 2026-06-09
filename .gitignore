@@ -33,3 +33,9 @@ Thumbs.db
 
 # Logs
 *.log
+.vercel
+
+# Raw/unoptimized 3D source files (too large for git)
+base_basic_pbr.glb
+base_basic_shaded.glb
+*.glb.orig
