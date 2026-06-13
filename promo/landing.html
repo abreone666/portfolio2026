@@ -1852,7 +1852,7 @@ src="https://www.facebook.com/tr?id=1643572476716410&ev=PageView&noscript=1"
       btn.disabled = true;
       btn.innerHTML = 'Invio in corso…';
       try {
-        const res = await fetch('../contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+        const res = await fetch('/contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
         const data = await res.json();
         resp.className = res.ok
           ? 'rounded-lg px-4 py-3 text-sm font-medium bg-green-100 text-green-800'

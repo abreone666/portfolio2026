@@ -691,7 +691,7 @@ src="https://www.facebook.com/tr?id=1643572476716410&ev=PageView&noscript=1"
                     const recaptchaToken = await grecaptcha.execute('6Ldsv7EsAAAAAA2eYbQjONhT-0GXXa8jBL30gVVK', { action: 'contact' });
                     fd.append('recaptcha_token', recaptchaToken);
                 }
-                const res = await fetch('../contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(fd)) });
+                const res = await fetch('/contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(fd)) });
                 const data = await res.json();
                 resp.className = res.ok
                     ? 'rounded-lg px-4 py-3 text-sm font-medium bg-green-800 text-green-200'
